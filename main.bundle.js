@@ -28,7 +28,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#banner {\n  width: 100%;\n  z-index: 1;\n  position: absolute;\n  top: -10px; }\n\n#letterhead {\n  width: 100%;\n  z-index: 999;\n  position: absolute;\n  top: 0; }\n\nmat-card {\n  z-index: 999;\n  background-color: #fff;\n  margin: 300px 10% 20px 10%;\n  width: 80%; }\n\n#under-construction {\n  width: 80%;\n  margin: 0 10%; }\n\nmat-grid-tile {\n  background: lightblue; }\n", ""]);
+exports.push([module.i, "#banner {\n  width: 100%;\n  z-index: 1;\n  position: absolute;\n  top: -10px;\n  max-height: 1300px; }\n\n#letterhead {\n  width: 100%;\n  z-index: 999;\n  position: absolute;\n  top: 0; }\n\nmat-card {\n  z-index: 999;\n  position: absolute;\n  top: 1300px;\n  background-color: #fff;\n  margin: 0px 10% 0px 10%;\n  width: 80%;\n  padding: 0; }\n\n#under-construction {\n  width: 50%;\n  margin: 0 25%; }\n\nmat-grid-tile {\n  background: lightblue; }\n", ""]);
 
 // exports
 
