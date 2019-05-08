@@ -1,0 +1,21 @@
+@import '~@angular/material/_theming';
+#background-image {
+    width: 100%;
+}
+
+ccc-summer-league-signup {
+    @include mat-elevation(12);
+    width: 40%;
+    min-width: 500px;
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    height: 400px;
+    padding-top: 20px;
+}
+
+.logo-footer {
+    width: 100%;
+}

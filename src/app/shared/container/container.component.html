@@ -1,0 +1,7 @@
+<ccc-header></ccc-header>
+<ccc-navbar></ccc-navbar>
+<ccc-sidenav [style.height.px]="sidenavHeight"></ccc-sidenav>
+<div id="content" [style.min-height.px]="windowHeight" [style.width.px]="windowWidth" [style.left.px]="offsetLeft">
+  <ng-content></ng-content>
+  <ccc-wallpaper *ngIf="hasWallpaper" [images]="images" [windowHeight]="windowHeight" [windowWidth]="windowWidth"></ccc-wallpaper>
+</div>

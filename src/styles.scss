@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/_theming';
+@import 'theme';
+@import 'common';
+
+body {
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+mat-card.content {
+    @include mat-elevation(12);
+    position: absolute;
+    top: 280px;
+    left: 4%;
+    min-height: 200px;
+    width: 80%;
+    background: #fff;
+}
+
+mat-form-field {
+    position: relative;
+    width: 80%;
+    padding-top: 20px;
+    margin-left: 8%;
+    margin-bottom: 20px;
+}
+
+mat-form-field.datepicker {
+    .mat-form-field-underline {
+        top: 32px;
+    }
+
+    .mat-form-field-label-wrapper {
+        bottom: -24px;
+    }
+}
+
+mat-radio-group {
+    display: block;
+    position: relative;
+    width: 92%;
+    padding-top: 20px;
+    margin-left: 8%;
+    margin-bottom: 20px;
+
+    .mat-radio-button {
+        width: 56px;
+        font-size: 12px;
+    }
+
+    .mat-radio-outer-circle,
+    .mat-radio-inner-circle {
+        left: 21px;
+        top: 1px;
+    }
+
+    .radio-group-label {
+        font-weight: bold;
+    }
+}
