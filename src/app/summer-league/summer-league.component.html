@@ -1,5 +1,70 @@
-<ccc-container [hasWallpaper]="false">
-  <ccc-summer-league-signup></ccc-summer-league-signup>
-  <img id="background-image" src="assets/jpg/memorial-park.jpg">
+<ccc-container
+  [hasWallpaper]="false"
+  backgroundImageUrl="jpg/memorial-park.jpg"
+>
+  <!-- <ccc-summer-league-signup></ccc-summer-league-signup> -->
+  <mat-grid-list cols="3" rowHeight="4:3">
+    <mat-grid-tile>
+      <a
+        class="link"
+        href="/assets/summer-league/10U Schedule.pdf"
+        target="_blank"
+      >
+        <mat-icon>picture_as_pdf</mat-icon>
+        <span class="label">10U Regular Season Schedule</span>
+      </a>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <a
+        class="link"
+        href="/assets/summer-league/12U Schedule.pdf"
+        target="_blank"
+      >
+        <mat-icon>picture_as_pdf</mat-icon>
+        <span class="label">12U Regular Season Schedule</span>
+      </a>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <a
+        class="link"
+        href="/assets/summer-league/14U Schedule.pdf"
+        target="_blank"
+      >
+        <mat-icon>picture_as_pdf</mat-icon>
+        <span class="label">14U Regular Season Schedule</span>
+      </a>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <a
+        class="link"
+        href="/assets/summer-league/10U Rosters.pdf"
+        target="_blank"
+      >
+        <mat-icon>picture_as_pdf</mat-icon>
+        <span class="label">10U Rosters</span>
+      </a>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <a
+        class="link"
+        href="/assets/summer-league/12U Rosters.pdf"
+        target="_blank"
+      >
+        <mat-icon>picture_as_pdf</mat-icon>
+        <span class="label">12U Rosters</span>
+      </a>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <a
+        class="link"
+        href="/assets/summer-league/14U Rosters.pdf"
+        target="_blank"
+      >
+        <mat-icon>picture_as_pdf</mat-icon>
+        <span class="label">14U Rosters</span>
+      </a>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <!-- <img id="background-image" src="assets/jpg/memorial-park.jpg" /> -->
   <!-- <img class="logo-footer" src="assets/summer-league-logo.png"> -->
 </ccc-container>
