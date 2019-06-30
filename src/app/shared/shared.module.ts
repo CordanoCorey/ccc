@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   MatCardModule,
@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
 import { LibraryModule } from '@caiu/library';
 
@@ -26,6 +27,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { ContainerComponent } from './container/container.component';
 import { MissionComponent } from './mission/mission.component';
 import { VisionComponent } from './vision/vision.component';
+import { environment } from '../../environments/environment';
 
 @NgModule({
   imports: [
@@ -43,6 +45,7 @@ import { VisionComponent } from './vision/vision.component';
     MatNativeDateModule,
     MatRadioModule,
     MatSelectModule,
+    MatSnackBarModule,
     MatToolbarModule
   ],
   exports: [
@@ -58,6 +61,7 @@ import { VisionComponent } from './vision/vision.component';
     MatNativeDateModule,
     MatRadioModule,
     MatSelectModule,
+    MatSnackBarModule,
     MatToolbarModule,
     CollageComponent,
     ContainerComponent,
@@ -81,4 +85,11 @@ import { VisionComponent } from './vision/vision.component';
     WallpaperComponent
   ]
 })
-export class SharedModule {}
+export class SharedModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: SharedModule,
+      providers: [{ provide: 'Environment', useValue: environment }]
+    };
+  }
+}
