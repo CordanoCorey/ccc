@@ -1,4 +1,5 @@
 @import '../../../common';
+
 #navbar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -15,7 +16,7 @@
     position: relative;
     margin-top: 60px;
     height: 70px;
-    min-width: 1000px;
+
     .summer-league-logo {
         position: absolute;
         height: 100%;
@@ -23,6 +24,7 @@
         left: 120px;
         cursor: pointer;
     }
+
     a.link {
         width: auto;
         margin: 0;
@@ -36,6 +38,7 @@
         color: #222;
         font: 20px 'LeagueGothicRegular';
     }
+
     a.link:hover {
         color: #8e8e8e;
         font-weight: bold;

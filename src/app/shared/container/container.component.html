@@ -1,5 +1,9 @@
 <ccc-header></ccc-header>
-<ccc-navbar [isMobile]="isMobile" [menuItems]="navbarMenuItems"></ccc-navbar>
+<ccc-navbar
+  [isMobile]="isMobile"
+  [menuItems]="navbarMenuItems"
+  [width]="windowWidth"
+></ccc-navbar>
 <ccc-sidenav
   *ngIf="!isMobile"
   [style.height.px]="sidenavHeight"
@@ -8,7 +12,7 @@
 <div
   id="content"
   [style.min-height.px]="windowHeight"
-  [style.width.px]="windowWidth"
+  [style.width.px]="windowWidth - offsetLeft"
   [style.left.px]="offsetLeft"
   [style.background-image]="
     backgroundImageUrl ? 'url(/assets/' + backgroundImageUrl + ')' : 'none'

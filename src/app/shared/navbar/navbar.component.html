@@ -1,4 +1,8 @@
-<div id="navbar" [style.padding-left.px]="paddingLeft">
+<div
+  id="navbar"
+  [style.padding-left.px]="paddingLeft"
+  [style.width.px]="innerWidth"
+>
   <span *ngFor="let menuItem of menuItems">
     <a
       *ngIf="menuItem.routerLink"

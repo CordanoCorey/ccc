@@ -16,11 +16,16 @@ import { MenuItem } from '../models';
 export class NavbarComponent implements OnInit {
   @Input() isMobile = false;
   @Input() menuItems: MenuItem[] = [];
+  @Input() width = 0;
 
   constructor() {}
 
   get paddingLeft(): number {
-    return this.isMobile ? 40 : 160;
+    return this.isMobile ? 10 : 130;
+  }
+
+  get innerWidth(): number {
+    return this.width - this.paddingLeft;
   }
 
   ngOnInit() {}

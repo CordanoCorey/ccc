@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>game works!</p>\n"
+module.exports = ""
 
 /***/ }),
 
