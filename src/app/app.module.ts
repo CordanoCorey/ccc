@@ -26,6 +26,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReducersService } from './reducers.service';
 import { SharedModule } from './shared/shared.module';
+import { INITIAL_STATE } from './shared/seed';
 
 export const REDUCER_TOKEN = new InjectionToken<ActionReducerMap<any>>(
   'Registered Reducers'
@@ -57,7 +58,7 @@ export function getReducers(reducersService: ReducersService) {
     SharedModule.forRoot(),
     StorageModule.forRoot('RVU_STORE'),
     StoreModule.forRoot(REDUCER_TOKEN, {
-      initialState: {}
+      initialState: INITIAL_STATE
     })
   ],
   providers: [

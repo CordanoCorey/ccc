@@ -87,7 +87,9 @@ export class AppComponent extends SmartComponent implements OnInit {
   }
 
   get lookupValues(): Lookup[] {
-    return [];
+    return [
+      // build(Lookup, { key: 'StatCategories', values: STAT_CATEGORIES })
+    ];
   }
 
   get sessionStorageActions(): string[] {

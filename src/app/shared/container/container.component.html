@@ -1,6 +1,10 @@
 <ccc-header></ccc-header>
-<ccc-navbar></ccc-navbar>
-<ccc-sidenav [style.height.px]="sidenavHeight"></ccc-sidenav>
+<ccc-navbar [isMobile]="isMobile" [menuItems]="navbarMenuItems"></ccc-navbar>
+<ccc-sidenav
+  *ngIf="!isMobile"
+  [style.height.px]="sidenavHeight"
+  [menuItems]="sidenavMenuItems"
+></ccc-sidenav>
 <div
   id="content"
   [style.min-height.px]="windowHeight"

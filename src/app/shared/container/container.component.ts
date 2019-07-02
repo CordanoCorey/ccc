@@ -3,7 +3,7 @@ import { SmartComponent } from '@caiu/library';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { Image } from '../models';
+import { Image, MenuItem } from '../models';
 import { isMobileSelector } from '../selectors';
 import { build } from '../utils';
 
@@ -15,6 +15,8 @@ import { build } from '../utils';
 export class ContainerComponent extends SmartComponent implements OnInit {
   @Input() hasWallpaper = true;
   @Input() backgroundImageUrl = null;
+  @Input() navbarMenuItems: MenuItem[] = [];
+  @Input() sidenavMenuItems: MenuItem[] = [];
   isMobile = false;
   isMobile$: Observable<boolean>;
   images = [
@@ -158,7 +160,7 @@ export class ContainerComponent extends SmartComponent implements OnInit {
       e && e.currentTarget && e.currentTarget.innerWidth
         ? e.currentTarget.innerWidth
         : 0;
-    console.log('\n\nwindow:load', this.windowWidth, this.windowHeight);
+    // console.log('\n\nwindow:load', this.windowWidth, this.windowHeight);
   }
 
   @HostListener('window:resize', ['$event'])

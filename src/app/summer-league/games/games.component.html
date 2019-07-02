@@ -1,0 +1,19 @@
+<div id="games" *ngIf="(routeName$ | async) === 'games'">
+  <div
+    class="game"
+    *ngFor="let game of games$ | async"
+    [routerLink]="getLink(game)"
+  >
+    <div class="game-time">
+      {{ game.startTime | date: 'shortDate' }} @
+      {{ game.startTime | date: 'shortTime' }}
+    </div>
+    <div class="game-location">{{ game.locationName }}</div>
+    <div class="score" *ngFor="let team of game.gameTeams">
+      <h3 class="team-name font-effect-emboss">{{ team.teamName }}</h3>
+      <h1 class="total-score font-effect-emboss">{{ team.score }}</h1>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

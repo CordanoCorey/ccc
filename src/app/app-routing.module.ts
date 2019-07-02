@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'portal', loadChildren: './portal/portal.module#PortalModule' },
   {
     path: 'summer-league',
-    loadChildren: './summer-league/summer-league.module#SummerLeagueModule'
+    loadChildren: () => import('./summer-league/summer-league.module').then(m => m.SummerLeagueModule)
   }
 ];
 

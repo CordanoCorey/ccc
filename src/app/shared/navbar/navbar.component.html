@@ -1,4 +1,17 @@
-<div id="navbar">
-  <a class="link" routerLink="/contact">Contact Us</a>
-  <a class="link" routerLink="/summer-league">Summer League</a>
+<div id="navbar" [style.padding-left.px]="paddingLeft">
+  <span *ngFor="let menuItem of menuItems">
+    <a
+      *ngIf="menuItem.routerLink"
+      class="link"
+      [routerLink]="menuItem.routerLink"
+      >{{ menuItem.label }}</a
+    >
+    <a
+      *ngIf="menuItem.externalLink"
+      class="link"
+      [href]="menuItem.externalLink"
+      target="_blank"
+      >{{ menuItem.label }}</a
+    >
+  </span>
 </div>

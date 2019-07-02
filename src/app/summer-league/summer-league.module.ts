@@ -6,10 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { SummerLeagueSignupComponent } from './summer-league-signup/summer-league-signup.component';
 
 @NgModule({
-  imports: [
-    SharedModule,
-    SummerLeagueRoutingModule
-  ],
+  imports: [SharedModule, SummerLeagueRoutingModule],
   declarations: [SummerLeagueComponent, SummerLeagueSignupComponent]
 })
-export class SummerLeagueModule { }
+export class SummerLeagueModule {}

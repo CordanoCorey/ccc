@@ -1,0 +1,47 @@
+<div id="standings">
+  <mat-table
+    class="standings"
+    [dataSource]="dataSource"
+    class="mat-elevation-z8"
+  >
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <mat-header-cell
+        *matHeaderCellDef
+        [style.width.px]="50"
+      ></mat-header-cell>
+      <mat-cell *matCellDef="let element" [style.width.px]="50">
+        {{ element.position }}
+      </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Team </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+    </ng-container>
+
+    <!-- W Column -->
+    <ng-container matColumnDef="wins">
+      <mat-header-cell *matHeaderCellDef> W </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.wins }} </mat-cell>
+    </ng-container>
+
+    <!-- L Column -->
+    <ng-container matColumnDef="losses">
+      <mat-header-cell *matHeaderCellDef> L </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.losses }} </mat-cell>
+    </ng-container>
+
+    <!-- Pct Column -->
+    <ng-container matColumnDef="winPct">
+      <mat-header-cell *matHeaderCellDef> Pct </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{ element.winPct | number: '1.3-3' }}
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+</div>

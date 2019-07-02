@@ -1,0 +1,42 @@
+@import '~@angular/material/_theming';
+@import '../../../../common';
+
+#standings {
+    width: 90%;
+    margin: 50px 9% 0 1%;
+
+    .mat-column-name,
+    .mat-column-position,
+    .mat-column-wins,
+    .mat-column-losses,
+    .mat-column-winPct {
+        word-wrap: break-word !important;
+        white-space: unset !important;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+
+        word-break: break-word;
+
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+
+    .mat-column-name {
+        width: 50% !important;
+        flex: 0 0 50% !important;
+    }
+
+    .mat-column-position,
+    .mat-column-wins,
+    .mat-column-losses {
+        width: 10% !important;
+        flex: 0 0 10% !important;
+    }
+
+    .mat-column-winPct {
+        width: 17.5% !important;
+        flex: 0 0 17.5% !important;
+    }
+}

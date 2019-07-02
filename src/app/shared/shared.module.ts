@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
 import { RouterModule } from '@angular/router';
 import { LibraryModule } from '@caiu/library';
 
@@ -46,6 +47,7 @@ import { environment } from '../../environments/environment';
     MatRadioModule,
     MatSelectModule,
     MatSnackBarModule,
+    MatTableModule,
     MatToolbarModule
   ],
   exports: [
@@ -62,6 +64,7 @@ import { environment } from '../../environments/environment';
     MatRadioModule,
     MatSelectModule,
     MatSnackBarModule,
+    MatTableModule,
     MatToolbarModule,
     CollageComponent,
     ContainerComponent,
