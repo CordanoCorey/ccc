@@ -26,8 +26,7 @@ export class NavbarComponent implements OnInit {
   }
 
   get innerWidth(): number {
-    // return this.width - this.paddingLeft;
-    return this.width;
+    return this.width - this.paddingLeft;
   }
 
   get menuItemWidth(): number {
