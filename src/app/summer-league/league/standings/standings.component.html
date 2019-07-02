@@ -21,6 +21,12 @@
       <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
     </ng-container>
 
+    <!-- Point Diff Column -->
+    <ng-container matColumnDef="pointDiff">
+      <mat-header-cell *matHeaderCellDef> Point Diff. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.pointDiff }} </mat-cell>
+    </ng-container>
+
     <!-- W Column -->
     <ng-container matColumnDef="wins">
       <mat-header-cell *matHeaderCellDef> W </mat-header-cell>

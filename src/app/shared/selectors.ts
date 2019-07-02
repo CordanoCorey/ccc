@@ -104,7 +104,8 @@ export function leagueTeamsSelector(
           })
         )
         .sort((a, b) =>
-          compareNumbers(a.winPct + 0.001 * a.wins, b.winPct + 0.001 * b.wins)
+          // compareNumbers(a.winPct + 0.001 * a.wins, b.winPct + 0.001 * b.wins)
+          compareNumbers(a.pointDiff, b.pointDiff)
         )
         .reverse();
     }
@@ -143,12 +144,8 @@ export function gameTeamsSelector(store: Store<any>): Observable<GameTeam[]> {
                 ).id
           )
         ).total;
-        gt.gameResultTypeId =
-          gt.score > opposingTeamPoints
-            ? 1
-            : gt.score < opposingTeamPoints
-            ? 2
-            : 3;
+        gt.pointDiff = gt.score - opposingTeamPoints;
+        gt.gameResultTypeId = gt.pointDiff > 0 ? 1 : gt.pointDiff < 0 ? 2 : 3;
         return gt;
       });
     }

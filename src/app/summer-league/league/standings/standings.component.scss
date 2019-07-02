@@ -7,6 +7,7 @@
 
     .mat-column-name,
     .mat-column-position,
+    .mat-column-pointDiff,
     .mat-column-wins,
     .mat-column-losses,
     .mat-column-winPct {
@@ -24,8 +25,8 @@
     }
 
     .mat-column-name {
-        width: 50% !important;
-        flex: 0 0 50% !important;
+        width: 40% !important;
+        flex: 0 0 40% !important;
     }
 
     .mat-column-position,
@@ -35,8 +36,9 @@
         flex: 0 0 10% !important;
     }
 
+    .mat-column-pointDiff,
     .mat-column-winPct {
-        width: 17.5% !important;
-        flex: 0 0 17.5% !important;
+        width: 15% !important;
+        flex: 0 0 15% !important;
     }
 }

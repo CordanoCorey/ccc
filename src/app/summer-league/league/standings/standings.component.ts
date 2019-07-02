@@ -12,7 +12,14 @@ import { leagueTeamsSelector } from '../../../shared/selectors';
   styleUrls: ['./standings.component.scss']
 })
 export class StandingsComponent extends SmartComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'wins', 'losses', 'winPct'];
+  displayedColumns: string[] = [
+    'position',
+    'name',
+    'pointDiff',
+    'wins',
+    'losses',
+    'winPct'
+  ];
   dataSource = [];
   leagueTeams$: Observable<LeagueTeam[]>;
   _leagueTeams: LeagueTeam[] = [];
@@ -27,6 +34,7 @@ export class StandingsComponent extends SmartComponent implements OnInit {
       return {
         position: i + 1,
         name: x.team.name,
+        pointDiff: x.pointDiff,
         wins: x.wins,
         losses: x.losses,
         winPct: x.winPct

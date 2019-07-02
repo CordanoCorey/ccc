@@ -1552,6 +1552,7 @@ var GameTeam = /** @class */ (function () {
         this.teamName = '';
         this.gameTeamTypeId = 0;
         this.gameResultTypeId = 0;
+        this.pointDiff = 0;
         this.teamStats = [];
     }
     Object.defineProperty(GameTeam.prototype, "score", {
@@ -1596,6 +1597,15 @@ var LeagueTeam = /** @class */ (function () {
         this.games = [];
         this.team = new Team();
     }
+    Object.defineProperty(LeagueTeam.prototype, "pointDiff", {
+        get: function () {
+            return this.games.reduce(function (acc, x) {
+                return acc + x.pointDiff;
+            }, 0);
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(LeagueTeam.prototype, "wins", {
         get: function () {
             return this.games.filter(function (x) { return x.gameResultTypeId === 1; }).length;
@@ -3715,7 +3725,8 @@ function leagueTeamsSelector(store) {
             });
         })
             .sort(function (a, b) {
-            return Object(_caiu_library__WEBPACK_IMPORTED_MODULE_0__["compareNumbers"])(a.winPct + 0.001 * a.wins, b.winPct + 0.001 * b.wins);
+            // compareNumbers(a.winPct + 0.001 * a.wins, b.winPct + 0.001 * b.wins)
+            return Object(_caiu_library__WEBPACK_IMPORTED_MODULE_0__["compareNumbers"])(a.pointDiff, b.pointDiff);
         })
             .reverse();
     });
@@ -3737,12 +3748,8 @@ function gameTeamsSelector(store) {
                     y.gameTeamId ===
                         Object(_caiu_library__WEBPACK_IMPORTED_MODULE_0__["build"])(_models__WEBPACK_IMPORTED_MODULE_3__["GameTeam"], gameTeams.find(function (z) { return z.gameId === gt.gameId && z.teamId !== gt.teamId; })).id;
             })).total;
-            gt.gameResultTypeId =
-                gt.score > opposingTeamPoints
-                    ? 1
-                    : gt.score < opposingTeamPoints
-                        ? 2
-                        : 3;
+            gt.pointDiff = gt.score - opposingTeamPoints;
+            gt.gameResultTypeId = gt.pointDiff > 0 ? 1 : gt.pointDiff < 0 ? 2 : 3;
             return gt;
         });
     });

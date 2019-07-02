@@ -117,6 +117,7 @@ export class GameTeam {
   teamName = '';
   gameTeamTypeId = 0;
   gameResultTypeId = 0;
+  pointDiff = 0;
   teamStats: TeamStat[] = [];
 
   get score(): number {
@@ -147,6 +148,12 @@ export class GamePlayers extends Collection<GamePlayer> {
 export class LeagueTeam {
   games: GameTeam[] = [];
   team: Team = new Team();
+
+  get pointDiff(): number {
+    return this.games.reduce((acc, x) => {
+      return acc + x.pointDiff;
+    }, 0);
+  }
 
   get wins(): number {
     return this.games.filter(x => x.gameResultTypeId === 1).length;
