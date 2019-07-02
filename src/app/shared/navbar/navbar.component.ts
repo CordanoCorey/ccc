@@ -4,6 +4,7 @@ import {
   Input,
   ChangeDetectionStrategy
 } from '@angular/core';
+import { toArray } from '@caiu/library';
 
 import { MenuItem } from '../models';
 
@@ -21,11 +22,18 @@ export class NavbarComponent implements OnInit {
   constructor() {}
 
   get paddingLeft(): number {
-    return this.isMobile ? 10 : 130;
+    return this.isMobile ? 30 : 150;
   }
 
   get innerWidth(): number {
     return this.width - this.paddingLeft;
+  }
+
+  get menuItemWidth(): number {
+    return Math.max(
+      Math.min(150, this.innerWidth / toArray(this.menuItems).length),
+      100
+    );
   }
 
   ngOnInit() {}

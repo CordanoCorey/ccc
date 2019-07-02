@@ -26,10 +26,10 @@
     }
 
     a.link {
-        width: auto;
+        display: inline-flex;
         margin: 0;
         cursor: pointer;
-        padding: 14px 28px;
+        padding: 14px 0;
         position: relative;
         text-decoration: none;
         color: black;
@@ -37,6 +37,7 @@
         text-shadow: 0px 1px 1px #4d4d4d;
         color: #222;
         font: 20px 'LeagueGothicRegular';
+        text-align: center;
     }
 
     a.link:hover {

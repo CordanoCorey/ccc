@@ -1,4 +1,4 @@
-import { Action } from '@caiu/library';
+import { Action, build } from '@caiu/library';
 
 import {
   Players,
@@ -12,9 +12,21 @@ import {
   StatCategories,
   TeamStats
 } from './models';
+import {
+  PLAYERS,
+  TEAMS,
+  LEAGUES,
+  GAMES,
+  GAME_TEAMS,
+  GAME_PLAYERS,
+  LOCATIONS,
+  STATS,
+  TEAM_STATS,
+  STAT_CATEGORIES
+} from './seed';
 
 export function playersReducer(
-  state: Players = new Players(),
+  state: Players = build(Players, { items: PLAYERS }),
   action: Action
 ): Players {
   switch (action.type) {
@@ -24,7 +36,7 @@ export function playersReducer(
 }
 
 export function teamsReducer(
-  state: Teams = new Teams(),
+  state: Teams = build(Teams, { items: TEAMS }),
   action: Action
 ): Teams {
   switch (action.type) {
@@ -34,7 +46,7 @@ export function teamsReducer(
 }
 
 export function leaguesReducer(
-  state: Leagues = new Leagues(),
+  state: Leagues = build(Leagues, { items: LEAGUES }),
   action: Action
 ): Leagues {
   switch (action.type) {
@@ -44,7 +56,7 @@ export function leaguesReducer(
 }
 
 export function gamesReducer(
-  state: Games = new Games(),
+  state: Games = build(Games, { items: GAMES }),
   action: Action
 ): Games {
   switch (action.type) {
@@ -54,7 +66,7 @@ export function gamesReducer(
 }
 
 export function gameTeamsReducer(
-  state: GameTeams = new GameTeams(),
+  state: GameTeams = build(GameTeams, { items: GAME_TEAMS }),
   action: Action
 ): GameTeams {
   switch (action.type) {
@@ -64,7 +76,7 @@ export function gameTeamsReducer(
 }
 
 export function gamePlayersReducer(
-  state: GamePlayers = new GamePlayers(),
+  state: GamePlayers = build(GamePlayers, { items: GAME_PLAYERS }),
   action: Action
 ): GamePlayers {
   switch (action.type) {
@@ -74,7 +86,7 @@ export function gamePlayersReducer(
 }
 
 export function locationsReducer(
-  state: Locations = new Locations(),
+  state: Locations = build(Locations, { items: LOCATIONS }),
   action: Action
 ): Locations {
   switch (action.type) {
@@ -84,7 +96,7 @@ export function locationsReducer(
 }
 
 export function statsReducer(
-  state: Stats = new Stats(),
+  state: Stats = build(Stats, { items: STATS }),
   action: Action
 ): Stats {
   switch (action.type) {
@@ -94,7 +106,7 @@ export function statsReducer(
 }
 
 export function teamStatsReducer(
-  state: TeamStats = new TeamStats(),
+  state: TeamStats = build(TeamStats, { items: TEAM_STATS }),
   action: Action
 ): TeamStats {
   switch (action.type) {
@@ -104,7 +116,7 @@ export function teamStatsReducer(
 }
 
 export function statCategoriesReducer(
-  state: StatCategories = new StatCategories(),
+  state: StatCategories = build(StatCategories, { items: STAT_CATEGORIES }),
   action: Action
 ): StatCategories {
   switch (action.type) {

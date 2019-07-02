@@ -8,6 +8,7 @@
       *ngIf="menuItem.routerLink"
       class="link"
       [routerLink]="menuItem.routerLink"
+      [style.width.px]="menuItemWidth"
       >{{ menuItem.label }}</a
     >
     <a
@@ -15,6 +16,7 @@
       class="link"
       [href]="menuItem.externalLink"
       target="_blank"
+      [style.width.px]="menuItemWidth"
       >{{ menuItem.label }}</a
     >
   </span>

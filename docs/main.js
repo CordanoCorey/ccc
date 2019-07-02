@@ -29,7 +29,7 @@ module.exports = "<ccc-tile *ngFor=\"let tile of tiles\" [tile]=\"tile\"></ccc-t
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ccc-header></ccc-header>\r\n<ccc-navbar\r\n  [isMobile]=\"isMobile\"\r\n  [menuItems]=\"navbarMenuItems\"\r\n  [width]=\"windowWidth\"\r\n></ccc-navbar>\r\n<ccc-sidenav\r\n  *ngIf=\"!isMobile\"\r\n  [style.height.px]=\"sidenavHeight\"\r\n  [menuItems]=\"sidenavMenuItems\"\r\n></ccc-sidenav>\r\n<div\r\n  id=\"content\"\r\n  [style.min-height.px]=\"windowHeight\"\r\n  [style.width.px]=\"windowWidth - offsetLeft\"\r\n  [style.left.px]=\"offsetLeft\"\r\n  [style.background-image]=\"\r\n    backgroundImageUrl ? 'url(/assets/' + backgroundImageUrl + ')' : 'none'\r\n  \"\r\n>\r\n  <ng-content></ng-content>\r\n  <ccc-wallpaper\r\n    *ngIf=\"hasWallpaper\"\r\n    [images]=\"images\"\r\n    [windowHeight]=\"windowHeight\"\r\n    [windowWidth]=\"windowWidth\"\r\n  ></ccc-wallpaper>\r\n</div>\r\n"
+module.exports = "<ccc-header [isMobile]=\"isMobile\"></ccc-header>\r\n<ccc-navbar\r\n  [isMobile]=\"isMobile\"\r\n  [menuItems]=\"navbarMenuItems\"\r\n  [width]=\"windowWidth\"\r\n></ccc-navbar>\r\n<ccc-sidenav\r\n  *ngIf=\"!isMobile\"\r\n  [style.height.px]=\"sidenavHeight\"\r\n  [menuItems]=\"sidenavMenuItems\"\r\n></ccc-sidenav>\r\n<div\r\n  id=\"content\"\r\n  [style.min-height.px]=\"windowHeight\"\r\n  [style.width.px]=\"windowWidth - offsetLeft\"\r\n  [style.left.px]=\"offsetLeft\"\r\n  [style.background-image]=\"\r\n    backgroundImageUrl ? 'url(/assets/' + backgroundImageUrl + ')' : 'none'\r\n  \"\r\n>\r\n  <ng-content></ng-content>\r\n  <ccc-wallpaper\r\n    *ngIf=\"hasWallpaper\"\r\n    [images]=\"images\"\r\n    [windowHeight]=\"windowHeight\"\r\n    [windowWidth]=\"windowWidth\"\r\n  ></ccc-wallpaper>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -40,7 +40,7 @@ module.exports = "<ccc-header></ccc-header>\r\n<ccc-navbar\r\n  [isMobile]=\"isM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar id=\"header\" color=\"primary\" class=\"mat-elevation-z6\">\r\n  <img id=\"logo\" src=\"assets/CCC-letterhead.png\" routerLink=\"/\">\r\n  <img id=\"summer-league\" src=\"assets/summer-league-logo.png\" routerLink=\"/summer-league\">\r\n</mat-toolbar>\r\n"
+module.exports = "<mat-toolbar id=\"header\" color=\"primary\" class=\"mat-elevation-z6\">\r\n  <img id=\"logo\" src=\"assets/CCC-letterhead.png\" routerLink=\"/\" />\r\n  <img\r\n    *ngIf=\"!isMobile\"\r\n    id=\"summer-league\"\r\n    src=\"assets/summer-league-logo.png\"\r\n    routerLink=\"/summer-league\"\r\n  />\r\n</mat-toolbar>\r\n"
 
 /***/ }),
 
@@ -62,7 +62,7 @@ module.exports = "<div class=\"mission\">\r\n  <mat-card>\r\n    <h2>Mission</h2
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div\r\n  id=\"navbar\"\r\n  [style.padding-left.px]=\"paddingLeft\"\r\n  [style.width.px]=\"innerWidth\"\r\n>\r\n  <span *ngFor=\"let menuItem of menuItems\">\r\n    <a\r\n      *ngIf=\"menuItem.routerLink\"\r\n      class=\"link\"\r\n      [routerLink]=\"menuItem.routerLink\"\r\n      >{{ menuItem.label }}</a\r\n    >\r\n    <a\r\n      *ngIf=\"menuItem.externalLink\"\r\n      class=\"link\"\r\n      [href]=\"menuItem.externalLink\"\r\n      target=\"_blank\"\r\n      >{{ menuItem.label }}</a\r\n    >\r\n  </span>\r\n</div>\r\n"
+module.exports = "<div\r\n  id=\"navbar\"\r\n  [style.padding-left.px]=\"paddingLeft\"\r\n  [style.width.px]=\"innerWidth\"\r\n>\r\n  <span *ngFor=\"let menuItem of menuItems\">\r\n    <a\r\n      *ngIf=\"menuItem.routerLink\"\r\n      class=\"link\"\r\n      [routerLink]=\"menuItem.routerLink\"\r\n      [style.width.px]=\"menuItemWidth\"\r\n      >{{ menuItem.label }}</a\r\n    >\r\n    <a\r\n      *ngIf=\"menuItem.externalLink\"\r\n      class=\"link\"\r\n      [href]=\"menuItem.externalLink\"\r\n      target=\"_blank\"\r\n      [style.width.px]=\"menuItemWidth\"\r\n      >{{ menuItem.label }}</a\r\n    >\r\n  </span>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1285,13 +1285,18 @@ __webpack_require__.r(__webpack_exports__);
 
 var HeaderComponent = /** @class */ (function () {
     function HeaderComponent() {
+        this.isMobile = false;
     }
-    HeaderComponent.prototype.ngOnInit = function () {
-    };
+    HeaderComponent.prototype.ngOnInit = function () { };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+    ], HeaderComponent.prototype, "isMobile", void 0);
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'ccc-header',
             template: __webpack_require__(/*! raw-loader!./header.component.html */ "./node_modules/raw-loader/index.js!./src/app/shared/header/header.component.html"),
+            changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush,
             styles: [__webpack_require__(/*! ./header.component.scss */ "./src/app/shared/header/header.component.scss")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
@@ -1711,7 +1716,7 @@ var Image = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#navbar {\n  display: flex;\n  align-items: center;\n  background-color: #323232;\n  background: darkgreen;\n  background: #8e8e8e;\n  background: #dadada;\n  padding: 0;\n  padding-top: 0px;\n  position: relative;\n  margin-top: 60px;\n  height: 70px;\n}\n#navbar .summer-league-logo {\n  position: absolute;\n  height: 100%;\n  top: 0;\n  left: 120px;\n  cursor: pointer;\n}\n#navbar a.link {\n  width: auto;\n  margin: 0;\n  cursor: pointer;\n  padding: 14px 28px;\n  position: relative;\n  text-decoration: none;\n  color: black;\n  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3);\n  text-shadow: 0px 1px 1px #4d4d4d;\n  color: #222;\n  font: 20px \"LeagueGothicRegular\";\n}\n#navbar a.link:hover {\n  color: #8e8e8e;\n  font-weight: bold;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL25hdmJhci9DOlxcYXBwZGV2XFxjY2Mvc3JjXFxhcHBcXHNoYXJlZFxcbmF2YmFyXFxuYXZiYXIuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoYXJlZC9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBR0ksYUFBQTtFQUdBLG1CQUFBO0VBQ0EseUJBQUE7RUFDQSxxQkFBQTtFQUNBLG1CQUFBO0VBQ0EsbUJBQUE7RUFDQSxVQUFBO0VBQ0EsZ0JBQUE7RUFDQSxrQkFBQTtFQUNBLGdCQUFBO0VBQ0EsWUFBQTtBQ0RKO0FER0k7RUFDSSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxNQUFBO0VBQ0EsV0FBQTtFQUNBLGVBQUE7QUNEUjtBRElJO0VBQ0ksV0FBQTtFQUNBLFNBQUE7RUFDQSxlQUFBO0VBQ0Esa0JBQUE7RUFDQSxrQkFBQTtFQUNBLHFCQUFBO0VBQ0EsWUFBQTtFQUNBLGlEQUFBO0VBQ0EsZ0NBQUE7RUFDQSxXQUFBO0VBQ0EsZ0NBQUE7QUNGUjtBREtJO0VBQ0ksY0FBQTtFQUNBLGlCQUFBO0FDSFIiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvbmF2YmFyL25hdmJhci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgJy4uLy4uLy4uL2NvbW1vbic7XHJcblxyXG4jbmF2YmFyIHtcclxuICAgIGRpc3BsYXk6IC13ZWJraXQtYm94O1xyXG4gICAgZGlzcGxheTogLW1zLWZsZXhib3g7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgLXdlYmtpdC1ib3gtYWxpZ246IGNlbnRlcjtcclxuICAgIC1tcy1mbGV4LWFsaWduOiBjZW50ZXI7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzMyMzIzMjtcclxuICAgIGJhY2tncm91bmQ6IGRhcmtncmVlbjtcclxuICAgIGJhY2tncm91bmQ6ICM4ZThlOGU7XHJcbiAgICBiYWNrZ3JvdW5kOiAjZGFkYWRhO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIHBhZGRpbmctdG9wOiAwcHg7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICBtYXJnaW4tdG9wOiA2MHB4O1xyXG4gICAgaGVpZ2h0OiA3MHB4O1xyXG5cclxuICAgIC5zdW1tZXItbGVhZ3VlLWxvZ28ge1xyXG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICAgICAgdG9wOiAwO1xyXG4gICAgICAgIGxlZnQ6IDEyMHB4O1xyXG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIH1cclxuXHJcbiAgICBhLmxpbmsge1xyXG4gICAgICAgIHdpZHRoOiBhdXRvO1xyXG4gICAgICAgIG1hcmdpbjogMDtcclxuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICAgICAgcGFkZGluZzogMTRweCAyOHB4O1xyXG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICAgICAgY29sb3I6IGJsYWNrO1xyXG4gICAgICAgIHRleHQtc2hhZG93OiAwcHggMXB4IDBweCByZ2JhKDI1NSwgMjU1LCAyNTUsIC4zKTtcclxuICAgICAgICB0ZXh0LXNoYWRvdzogMHB4IDFweCAxcHggIzRkNGQ0ZDtcclxuICAgICAgICBjb2xvcjogIzIyMjtcclxuICAgICAgICBmb250OiAyMHB4ICdMZWFndWVHb3RoaWNSZWd1bGFyJztcclxuICAgIH1cclxuXHJcbiAgICBhLmxpbms6aG92ZXIge1xyXG4gICAgICAgIGNvbG9yOiAjOGU4ZThlO1xyXG4gICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgfVxyXG59XHJcbiIsIiNuYXZiYXIge1xuICBkaXNwbGF5OiAtd2Via2l0LWJveDtcbiAgZGlzcGxheTogLW1zLWZsZXhib3g7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIC13ZWJraXQtYm94LWFsaWduOiBjZW50ZXI7XG4gIC1tcy1mbGV4LWFsaWduOiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGJhY2tncm91bmQtY29sb3I6ICMzMjMyMzI7XG4gIGJhY2tncm91bmQ6IGRhcmtncmVlbjtcbiAgYmFja2dyb3VuZDogIzhlOGU4ZTtcbiAgYmFja2dyb3VuZDogI2RhZGFkYTtcbiAgcGFkZGluZzogMDtcbiAgcGFkZGluZy10b3A6IDBweDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBtYXJnaW4tdG9wOiA2MHB4O1xuICBoZWlnaHQ6IDcwcHg7XG59XG4jbmF2YmFyIC5zdW1tZXItbGVhZ3VlLWxvZ28ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGhlaWdodDogMTAwJTtcbiAgdG9wOiAwO1xuICBsZWZ0OiAxMjBweDtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuI25hdmJhciBhLmxpbmsge1xuICB3aWR0aDogYXV0bztcbiAgbWFyZ2luOiAwO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIHBhZGRpbmc6IDE0cHggMjhweDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIGNvbG9yOiBibGFjaztcbiAgdGV4dC1zaGFkb3c6IDBweCAxcHggMHB4IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4zKTtcbiAgdGV4dC1zaGFkb3c6IDBweCAxcHggMXB4ICM0ZDRkNGQ7XG4gIGNvbG9yOiAjMjIyO1xuICBmb250OiAyMHB4IFwiTGVhZ3VlR290aGljUmVndWxhclwiO1xufVxuI25hdmJhciBhLmxpbms6aG92ZXIge1xuICBjb2xvcjogIzhlOGU4ZTtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59Il19 */"
+module.exports = "#navbar {\n  display: flex;\n  align-items: center;\n  background-color: #323232;\n  background: darkgreen;\n  background: #8e8e8e;\n  background: #dadada;\n  padding: 0;\n  padding-top: 0px;\n  position: relative;\n  margin-top: 60px;\n  height: 70px;\n}\n#navbar .summer-league-logo {\n  position: absolute;\n  height: 100%;\n  top: 0;\n  left: 120px;\n  cursor: pointer;\n}\n#navbar a.link {\n  display: inline-flex;\n  margin: 0;\n  cursor: pointer;\n  padding: 14px 0;\n  position: relative;\n  text-decoration: none;\n  color: black;\n  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3);\n  text-shadow: 0px 1px 1px #4d4d4d;\n  color: #222;\n  font: 20px \"LeagueGothicRegular\";\n  text-align: center;\n}\n#navbar a.link:hover {\n  color: #8e8e8e;\n  font-weight: bold;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL25hdmJhci9DOlxcYXBwZGV2XFxjY2Mvc3JjXFxhcHBcXHNoYXJlZFxcbmF2YmFyXFxuYXZiYXIuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoYXJlZC9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBR0ksYUFBQTtFQUdBLG1CQUFBO0VBQ0EseUJBQUE7RUFDQSxxQkFBQTtFQUNBLG1CQUFBO0VBQ0EsbUJBQUE7RUFDQSxVQUFBO0VBQ0EsZ0JBQUE7RUFDQSxrQkFBQTtFQUNBLGdCQUFBO0VBQ0EsWUFBQTtBQ0RKO0FER0k7RUFDSSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxNQUFBO0VBQ0EsV0FBQTtFQUNBLGVBQUE7QUNEUjtBRElJO0VBQ0ksb0JBQUE7RUFDQSxTQUFBO0VBQ0EsZUFBQTtFQUNBLGVBQUE7RUFDQSxrQkFBQTtFQUNBLHFCQUFBO0VBQ0EsWUFBQTtFQUNBLGlEQUFBO0VBQ0EsZ0NBQUE7RUFDQSxXQUFBO0VBQ0EsZ0NBQUE7RUFDQSxrQkFBQTtBQ0ZSO0FES0k7RUFDSSxjQUFBO0VBQ0EsaUJBQUE7QUNIUiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnLi4vLi4vLi4vY29tbW9uJztcclxuXHJcbiNuYXZiYXIge1xyXG4gICAgZGlzcGxheTogLXdlYmtpdC1ib3g7XHJcbiAgICBkaXNwbGF5OiAtbXMtZmxleGJveDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAtd2Via2l0LWJveC1hbGlnbjogY2VudGVyO1xyXG4gICAgLW1zLWZsZXgtYWxpZ246IGNlbnRlcjtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzIzMjMyO1xyXG4gICAgYmFja2dyb3VuZDogZGFya2dyZWVuO1xyXG4gICAgYmFja2dyb3VuZDogIzhlOGU4ZTtcclxuICAgIGJhY2tncm91bmQ6ICNkYWRhZGE7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgcGFkZGluZy10b3A6IDBweDtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIG1hcmdpbi10b3A6IDYwcHg7XHJcbiAgICBoZWlnaHQ6IDcwcHg7XHJcblxyXG4gICAgLnN1bW1lci1sZWFndWUtbG9nbyB7XHJcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICAgIGhlaWdodDogMTAwJTtcclxuICAgICAgICB0b3A6IDA7XHJcbiAgICAgICAgbGVmdDogMTIwcHg7XHJcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgfVxyXG5cclxuICAgIGEubGluayB7XHJcbiAgICAgICAgZGlzcGxheTogaW5saW5lLWZsZXg7XHJcbiAgICAgICAgbWFyZ2luOiAwO1xyXG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgICAgICBwYWRkaW5nOiAxNHB4IDA7XHJcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuICAgICAgICBjb2xvcjogYmxhY2s7XHJcbiAgICAgICAgdGV4dC1zaGFkb3c6IDBweCAxcHggMHB4IHJnYmEoMjU1LCAyNTUsIDI1NSwgLjMpO1xyXG4gICAgICAgIHRleHQtc2hhZG93OiAwcHggMXB4IDFweCAjNGQ0ZDRkO1xyXG4gICAgICAgIGNvbG9yOiAjMjIyO1xyXG4gICAgICAgIGZvbnQ6IDIwcHggJ0xlYWd1ZUdvdGhpY1JlZ3VsYXInO1xyXG4gICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIH1cclxuXHJcbiAgICBhLmxpbms6aG92ZXIge1xyXG4gICAgICAgIGNvbG9yOiAjOGU4ZThlO1xyXG4gICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgfVxyXG59XHJcbiIsIiNuYXZiYXIge1xuICBkaXNwbGF5OiAtd2Via2l0LWJveDtcbiAgZGlzcGxheTogLW1zLWZsZXhib3g7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIC13ZWJraXQtYm94LWFsaWduOiBjZW50ZXI7XG4gIC1tcy1mbGV4LWFsaWduOiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGJhY2tncm91bmQtY29sb3I6ICMzMjMyMzI7XG4gIGJhY2tncm91bmQ6IGRhcmtncmVlbjtcbiAgYmFja2dyb3VuZDogIzhlOGU4ZTtcbiAgYmFja2dyb3VuZDogI2RhZGFkYTtcbiAgcGFkZGluZzogMDtcbiAgcGFkZGluZy10b3A6IDBweDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBtYXJnaW4tdG9wOiA2MHB4O1xuICBoZWlnaHQ6IDcwcHg7XG59XG4jbmF2YmFyIC5zdW1tZXItbGVhZ3VlLWxvZ28ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGhlaWdodDogMTAwJTtcbiAgdG9wOiAwO1xuICBsZWZ0OiAxMjBweDtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuI25hdmJhciBhLmxpbmsge1xuICBkaXNwbGF5OiBpbmxpbmUtZmxleDtcbiAgbWFyZ2luOiAwO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIHBhZGRpbmc6IDE0cHggMDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIGNvbG9yOiBibGFjaztcbiAgdGV4dC1zaGFkb3c6IDBweCAxcHggMHB4IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4zKTtcbiAgdGV4dC1zaGFkb3c6IDBweCAxcHggMXB4ICM0ZDRkNGQ7XG4gIGNvbG9yOiAjMjIyO1xuICBmb250OiAyMHB4IFwiTGVhZ3VlR290aGljUmVndWxhclwiO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4jbmF2YmFyIGEubGluazpob3ZlciB7XG4gIGNvbG9yOiAjOGU4ZThlO1xuICBmb250LXdlaWdodDogYm9sZDtcbn0iXX0= */"
 
 /***/ }),
 
@@ -1727,6 +1732,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavbarComponent", function() { return NavbarComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _caiu_library__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @caiu/library */ "./node_modules/@caiu/library/fesm5/caiu-library.js");
+
 
 
 var NavbarComponent = /** @class */ (function () {
@@ -1737,7 +1744,7 @@ var NavbarComponent = /** @class */ (function () {
     }
     Object.defineProperty(NavbarComponent.prototype, "paddingLeft", {
         get: function () {
-            return this.isMobile ? 10 : 130;
+            return this.isMobile ? 30 : 150;
         },
         enumerable: true,
         configurable: true
@@ -1745,6 +1752,13 @@ var NavbarComponent = /** @class */ (function () {
     Object.defineProperty(NavbarComponent.prototype, "innerWidth", {
         get: function () {
             return this.width - this.paddingLeft;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NavbarComponent.prototype, "menuItemWidth", {
+        get: function () {
+            return Math.max(Math.min(150, this.innerWidth / Object(_caiu_library__WEBPACK_IMPORTED_MODULE_2__["toArray"])(this.menuItems).length), 100);
         },
         enumerable: true,
         configurable: true
@@ -1797,73 +1811,77 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "statsReducer", function() { return statsReducer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "teamStatsReducer", function() { return teamStatsReducer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "statCategoriesReducer", function() { return statCategoriesReducer; });
-/* harmony import */ var _models__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./models */ "./src/app/shared/models.ts");
+/* harmony import */ var _caiu_library__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @caiu/library */ "./node_modules/@caiu/library/fesm5/caiu-library.js");
+/* harmony import */ var _models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./models */ "./src/app/shared/models.ts");
+/* harmony import */ var _seed__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./seed */ "./src/app/shared/seed.ts");
+
+
 
 function playersReducer(state, action) {
-    if (state === void 0) { state = new _models__WEBPACK_IMPORTED_MODULE_0__["Players"](); }
+    if (state === void 0) { state = Object(_caiu_library__WEBPACK_IMPORTED_MODULE_0__["build"])(_models__WEBPACK_IMPORTED_MODULE_1__["Players"], { items: _seed__WEBPACK_IMPORTED_MODULE_2__["PLAYERS"] }); }
     switch (action.type) {
         default:
             return state;
     }
 }
 function teamsReducer(state, action) {
-    if (state === void 0) { state = new _models__WEBPACK_IMPORTED_MODULE_0__["Teams"](); }
+    if (state === void 0) { state = Object(_caiu_library__WEBPACK_IMPORTED_MODULE_0__["build"])(_models__WEBPACK_IMPORTED_MODULE_1__["Teams"], { items: _seed__WEBPACK_IMPORTED_MODULE_2__["TEAMS"] }); }
     switch (action.type) {
         default:
             return state;
     }
 }
 function leaguesReducer(state, action) {
-    if (state === void 0) { state = new _models__WEBPACK_IMPORTED_MODULE_0__["Leagues"](); }
+    if (state === void 0) { state = Object(_caiu_library__WEBPACK_IMPORTED_MODULE_0__["build"])(_models__WEBPACK_IMPORTED_MODULE_1__["Leagues"], { items: _seed__WEBPACK_IMPORTED_MODULE_2__["LEAGUES"] }); }
     switch (action.type) {
         default:
             return state;
     }
 }
 function gamesReducer(state, action) {
-    if (state === void 0) { state = new _models__WEBPACK_IMPORTED_MODULE_0__["Games"](); }
+    if (state === void 0) { state = Object(_caiu_library__WEBPACK_IMPORTED_MODULE_0__["build"])(_models__WEBPACK_IMPORTED_MODULE_1__["Games"], { items: _seed__WEBPACK_IMPORTED_MODULE_2__["GAMES"] }); }
     switch (action.type) {
         default:
             return state;
     }
 }
 function gameTeamsReducer(state, action) {
-    if (state === void 0) { state = new _models__WEBPACK_IMPORTED_MODULE_0__["GameTeams"](); }
+    if (state === void 0) { state = Object(_caiu_library__WEBPACK_IMPORTED_MODULE_0__["build"])(_models__WEBPACK_IMPORTED_MODULE_1__["GameTeams"], { items: _seed__WEBPACK_IMPORTED_MODULE_2__["GAME_TEAMS"] }); }
     switch (action.type) {
         default:
             return state;
     }
 }
 function gamePlayersReducer(state, action) {
-    if (state === void 0) { state = new _models__WEBPACK_IMPORTED_MODULE_0__["GamePlayers"](); }
+    if (state === void 0) { state = Object(_caiu_library__WEBPACK_IMPORTED_MODULE_0__["build"])(_models__WEBPACK_IMPORTED_MODULE_1__["GamePlayers"], { items: _seed__WEBPACK_IMPORTED_MODULE_2__["GAME_PLAYERS"] }); }
     switch (action.type) {
         default:
             return state;
     }
 }
 function locationsReducer(state, action) {
-    if (state === void 0) { state = new _models__WEBPACK_IMPORTED_MODULE_0__["Locations"](); }
+    if (state === void 0) { state = Object(_caiu_library__WEBPACK_IMPORTED_MODULE_0__["build"])(_models__WEBPACK_IMPORTED_MODULE_1__["Locations"], { items: _seed__WEBPACK_IMPORTED_MODULE_2__["LOCATIONS"] }); }
     switch (action.type) {
         default:
             return state;
     }
 }
 function statsReducer(state, action) {
-    if (state === void 0) { state = new _models__WEBPACK_IMPORTED_MODULE_0__["Stats"](); }
+    if (state === void 0) { state = Object(_caiu_library__WEBPACK_IMPORTED_MODULE_0__["build"])(_models__WEBPACK_IMPORTED_MODULE_1__["Stats"], { items: _seed__WEBPACK_IMPORTED_MODULE_2__["STATS"] }); }
     switch (action.type) {
         default:
             return state;
     }
 }
 function teamStatsReducer(state, action) {
-    if (state === void 0) { state = new _models__WEBPACK_IMPORTED_MODULE_0__["TeamStats"](); }
+    if (state === void 0) { state = Object(_caiu_library__WEBPACK_IMPORTED_MODULE_0__["build"])(_models__WEBPACK_IMPORTED_MODULE_1__["TeamStats"], { items: _seed__WEBPACK_IMPORTED_MODULE_2__["TEAM_STATS"] }); }
     switch (action.type) {
         default:
             return state;
     }
 }
 function statCategoriesReducer(state, action) {
-    if (state === void 0) { state = new _models__WEBPACK_IMPORTED_MODULE_0__["StatCategories"](); }
+    if (state === void 0) { state = Object(_caiu_library__WEBPACK_IMPORTED_MODULE_0__["build"])(_models__WEBPACK_IMPORTED_MODULE_1__["StatCategories"], { items: _seed__WEBPACK_IMPORTED_MODULE_2__["STAT_CATEGORIES"] }); }
     switch (action.type) {
         default:
             return state;
