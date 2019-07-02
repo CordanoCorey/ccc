@@ -18,7 +18,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"league\" *ngIf=\"(routeName$ | async) === 'league'\">\n  <ccc-league-leaders></ccc-league-leaders>\n</div>\n<router-outlet></router-outlet>\n"
+module.exports = "<div id=\"league\" *ngIf=\"(routeName$ | async) === 'league'\">\n  <ccc-standings></ccc-standings>\n  <ccc-league-leaders></ccc-league-leaders>\n</div>\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 

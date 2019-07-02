@@ -1751,7 +1751,8 @@ var NavbarComponent = /** @class */ (function () {
     });
     Object.defineProperty(NavbarComponent.prototype, "innerWidth", {
         get: function () {
-            return this.width - this.paddingLeft;
+            // return this.width - this.paddingLeft;
+            return this.width;
         },
         enumerable: true,
         configurable: true
