@@ -8,9 +8,10 @@ mat-grid-list {
 .back {
     @include silver-hgradient();
     position: absolute;
-    top: 7px;
+    top: 5px;
     left: 0px;
     font-size: 24px;
+    padding: 10px 0;
 }
 
 ccc-summer-league-signup {
