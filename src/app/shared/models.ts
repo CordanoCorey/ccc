@@ -10,6 +10,10 @@ export class Player {
   lastName = '';
   nickname = '';
   isActive = true;
+
+  get fullName(): string {
+    return `${this.firstName} ${this.lastName}`;
+  }
 }
 
 export class Players extends Collection<Player> {
@@ -73,6 +77,7 @@ export class Stat {
   id = 0;
   gamePlayerId = 0;
   statCategoryId = 0;
+  statCategoryName = '';
   total = 0;
 }
 
@@ -114,15 +119,21 @@ export class GameTeam {
   id = 0;
   gameId = 0;
   teamId = 0;
+  teamColor = '';
   teamName = '';
   gameTeamTypeId = 0;
   gameResultTypeId = 0;
   pointDiff = 0;
+  players: GamePlayer[] = [];
   teamStats: TeamStat[] = [];
 
   get score(): number {
     return build(TeamStat, this.teamStats.find(x => x.statCategoryId === 1))
       .total;
+  }
+
+  get statlines(): any[] {
+    return this.players.map(x => x.statline);
   }
 }
 
@@ -135,8 +146,20 @@ export class GameTeams extends Collection<GameTeam> {
 export class GamePlayer {
   gameTeamId = 0;
   playerId = 0;
+  playerName = '';
   jerseyNumber = '';
   stats: Stat[] = [];
+
+  get statline(): any {
+    return this.stats.reduce(
+      (acc, stat) => {
+        return Object.assign({}, acc, {
+          [stat.statCategoryName.toLowerCase()]: stat.total
+        });
+      },
+      { number: this.jerseyNumber }
+    );
+  }
 }
 
 export class GamePlayers extends Collection<GamePlayer> {
@@ -169,6 +192,14 @@ export class LeagueTeam {
 
   get ties(): number {
     return this.games.filter(x => x.gameResultTypeId === 3).length;
+  }
+}
+
+export class BoxScore {
+  teams: GameTeam[] = [];
+
+  get statlines(): any[][] {
+    return this.teams.map(x => x.statlines);
   }
 }
 

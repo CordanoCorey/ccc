@@ -6,7 +6,9 @@ import {
   build,
   routeParamSelector,
   compareDates,
-  compareNumbers
+  compareNumbers,
+  routeParamIdSelector,
+  inArray
 } from '@caiu/library';
 import { Store } from '@ngrx/store';
 import { Observable, combineLatest } from 'rxjs';
@@ -20,7 +22,10 @@ import {
   Team,
   Location,
   League,
-  LeagueTeam
+  LeagueTeam,
+  BoxScore,
+  Stat,
+  GamePlayer
 } from './models';
 
 export function isMobileSelector(store: Store<any>): Observable<boolean> {
@@ -37,9 +42,7 @@ export function isMobileSelector(store: Store<any>): Observable<boolean> {
 export function statCategoriesSelector(
   store: Store<any>
 ): Observable<StatCategory[]> {
-  return lookupValuesSelector(store, 'StatCategories').pipe(
-    map(x => x.map(y => build(StatCategory, y)))
-  );
+  return store.select('statCategories').pipe(map(x => x.asArray));
 }
 
 export function locationsSelector(store: Store<any>): Observable<Location[]> {
@@ -128,8 +131,10 @@ export function gameTeamsSelector(store: Store<any>): Observable<GameTeam[]> {
     (gameTeams, teams, stats) => {
       return gameTeams.map(x => {
         const teamStats = stats.filter(y => y.gameTeamId === x.id);
-        const teamName = build(Team, teams.find(y => y.id === x.teamId)).name;
-        const gt = build(GameTeam, x, { teamStats, teamName });
+        const team = build(Team, teams.find(y => y.id === x.teamId));
+        const teamName = team.name;
+        const teamColor = team.color;
+        const gt = build(GameTeam, x, { teamStats, teamName, teamColor });
         const opposingTeamPoints = build(
           TeamStat,
           stats.find(
@@ -164,6 +169,71 @@ export function gameScoresSelector(store: Store<any>): Observable<Game[]> {
           return build(Game, x, { gameTeams });
         })
         .sort((a, b) => compareDates(a.startTime, b.startTime));
+    }
+  );
+}
+
+export function gameSelector(store: Store<any>): Observable<Game> {
+  return combineLatest(
+    gameScoresSelector(store),
+    routeParamIdSelector(store, 'gameId'),
+    (games, id) => games.find(x => x.id === id)
+  );
+}
+
+export function playerStatsSelector(store: Store<any>): Observable<Stat[]> {
+  return combineLatest(
+    store.select('stats').pipe(map(x => x.asArray)),
+    statCategoriesSelector(store),
+    (stats, statCats) => {
+      return stats.map(x =>
+        build(Stat, x, {
+          statCategoryName: build(
+            StatCategory,
+            statCats.find(y => y.id === x.statCategoryId)
+          ).name
+        })
+      );
+    }
+  );
+}
+
+export function gamePlayersSelector(
+  store: Store<any>
+): Observable<GamePlayer[]> {
+  return combineLatest(
+    store.select('gamePlayers').pipe(map(x => x.asArray)),
+    gameSelector(store),
+    playerStatsSelector(store),
+    store.select('players'),
+    (gamePlayers, game, stats, players) => {
+      console.dir(gamePlayers);
+      const gameTeamIds = game.gameTeams.map(x => x.id);
+      return gamePlayers
+        .filter(x => inArray(gameTeamIds, x.gameTeamId))
+        .map(x =>
+          build(GamePlayer, x, {
+            stats: stats.filter(y => y.gamePlayerId === x.id),
+            playerName: players.get(x.playerId).fullName
+          })
+        );
+    }
+  );
+}
+
+export function boxScoreSelector(store: Store<any>): Observable<BoxScore> {
+  return combineLatest(
+    gameSelector(store),
+    gamePlayersSelector(store),
+    (game, players) => {
+      console.dir(game);
+      console.dir(players);
+      const teams = game.gameTeams.map(x =>
+        build(GameTeam, x, {
+          players: players.filter(y => y.gameTeamId === x.id)
+        })
+      );
+      return build(BoxScore, { teams });
     }
   );
 }

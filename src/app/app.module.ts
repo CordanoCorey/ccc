@@ -58,7 +58,7 @@ export function getReducers(reducersService: ReducersService) {
     SharedModule.forRoot(),
     StorageModule.forRoot('RVU_STORE'),
     StoreModule.forRoot(REDUCER_TOKEN, {
-      initialState: INITIAL_STATE
+      // initialState: INITIAL_STATE
     })
   ],
   providers: [
