@@ -75,7 +75,11 @@ export class StatCategories extends Collection<StatCategory> {
 
 export class Stat {
   id = 0;
+  gameId = 0;
   gamePlayerId = 0;
+  gameTeamId = 0;
+  playerId = 0;
+  playerName = '';
   statCategoryId = 0;
   statCategoryName = '';
   total = 0;
@@ -144,6 +148,7 @@ export class GameTeams extends Collection<GameTeam> {
 }
 
 export class GamePlayer {
+  id = 0;
   gameTeamId = 0;
   playerId = 0;
   playerName = '';
@@ -192,6 +197,10 @@ export class LeagueTeam {
 
   get ties(): number {
     return this.games.filter(x => x.gameResultTypeId === 3).length;
+  }
+
+  get teamColor(): string {
+    return this.team.color;
   }
 }
 

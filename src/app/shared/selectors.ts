@@ -8,7 +8,9 @@ import {
   compareDates,
   compareNumbers,
   routeParamIdSelector,
-  inArray
+  inArray,
+  toArray,
+  toInt
 } from '@caiu/library';
 import { Store } from '@ngrx/store';
 import { Observable, combineLatest } from 'rxjs';
@@ -25,8 +27,10 @@ import {
   LeagueTeam,
   BoxScore,
   Stat,
-  GamePlayer
+  GamePlayer,
+  Player
 } from './models';
+import { average } from './utils';
 
 export function isMobileSelector(store: Store<any>): Observable<boolean> {
   return combineLatest(
@@ -185,17 +189,40 @@ export function playerStatsSelector(store: Store<any>): Observable<Stat[]> {
   return combineLatest(
     store.select('stats').pipe(map(x => x.asArray)),
     statCategoriesSelector(store),
-    (stats, statCats) => {
-      return stats.map(x =>
-        build(Stat, x, {
+    store.select('gamePlayers'),
+    store.select('gameTeams'),
+    (stats, statCats, gamePlayers, gameTeams) => {
+      console.dir(gamePlayers);
+      return stats.map(x => {
+        const gamePlayer = build(
+          GamePlayer,
+          gamePlayers.asArray.find(z => z.id === x.gamePlayerId)
+        );
+        const gameTeam = build(
+          GameTeam,
+          gameTeams.asArray.find(z => z.id === gamePlayer.gameTeamId)
+        );
+        // if (gamePlayer.playerId === 157) {
+        //   console.dir(gamePlayer);
+        //   console.dir(gameTeam);
+        //   console.dir(x);
+        // }
+        return build(Stat, x, {
           statCategoryName: build(
             StatCategory,
             statCats.find(y => y.id === x.statCategoryId)
-          ).name
-        })
-      );
+          ).name,
+          gameId: gameTeam.gameId,
+          gameTeamId: gamePlayer.gameTeamId,
+          playerId: gamePlayer.playerId
+        });
+      });
     }
   );
+}
+
+export function playersSelector(store: Store<any>): Observable<Player[]> {
+  return store.select('players').pipe(map(x => x.asArray));
 }
 
 export function gamePlayersSelector(
@@ -207,7 +234,7 @@ export function gamePlayersSelector(
     playerStatsSelector(store),
     store.select('players'),
     (gamePlayers, game, stats, players) => {
-      console.dir(gamePlayers);
+      // console.dir(gamePlayers);
       const gameTeamIds = game.gameTeams.map(x => x.id);
       return gamePlayers
         .filter(x => inArray(gameTeamIds, x.gameTeamId))
@@ -226,14 +253,81 @@ export function boxScoreSelector(store: Store<any>): Observable<BoxScore> {
     gameSelector(store),
     gamePlayersSelector(store),
     (game, players) => {
-      console.dir(game);
-      console.dir(players);
+      // console.dir(game);
+      // console.dir(players);
       const teams = game.gameTeams.map(x =>
         build(GameTeam, x, {
           players: players.filter(y => y.gameTeamId === x.id)
         })
       );
       return build(BoxScore, { teams });
+    }
+  );
+}
+
+export function leagueStatsSelector(store: Store<any>): Observable<Stat[]> {
+  return combineLatest(
+    playerStatsSelector(store),
+    leagueGamesSelector(store),
+    (stats, games) => {
+      return games.reduce((acc, game) => {
+        return [...acc, ...stats.filter(x => x.gameId === game.id)];
+      }, []);
+    }
+  );
+}
+
+export function leagueStatCategorySelector(
+  store: Store<any>,
+  statCategoryId$: Observable<number>
+): Observable<Stat[]> {
+  return combineLatest(
+    statCategoryId$,
+    leagueStatsSelector(store),
+    (statCatId, stats) => {
+      // console.dir(stats);
+      // console.log(statCatId);
+      return stats.filter(x => x.statCategoryId === statCatId);
+    }
+  );
+}
+
+export function leagueLeadersSelector(
+  store: Store<any>,
+  statCategoryId$: Observable<number>
+): Observable<Stat[]> {
+  return combineLatest(
+    leagueStatCategorySelector(store, statCategoryId$).pipe(
+      map(stats => {
+        console.dir(stats);
+        console.dir(stats.filter(x => x.playerId !== 0));
+        const byPlayer = stats.reduce((acc, x) => {
+          return Object.assign({}, acc, {
+            [x.playerId]: [...toArray(acc[x.playerId]), x.total]
+          });
+        }, {});
+        console.dir(byPlayer);
+        return Object.keys(byPlayer)
+          .map(key => {
+            const playerId = toInt(key);
+            return build(Stat, {
+              playerId,
+              total: average(toArray(byPlayer[playerId]))
+            });
+          })
+          .sort((a, b) => compareNumbers(a.total, b.total))
+          .reverse()
+          .filter((x, i) => i < 5);
+      })
+    ),
+    store.select('players'),
+    (stats, players) => {
+      console.dir(stats);
+      return stats.map(stat =>
+        build(Stat, stat, {
+          playerName: build(Player, players.get(stat.playerId)).fullName
+        })
+      );
     }
   );
 }

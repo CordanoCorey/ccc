@@ -5,6 +5,15 @@
   backgroundImageUrl="jpg/memorial-park.jpg"
 >
   <!-- <ccc-summer-league-signup></ccc-summer-league-signup> -->
+  <a
+    *ngIf="(routeName$ | async) !== 'summer-league'"
+    mat-raised-button
+    class="back font-effect-emboss"
+    routerLink="/summer-league"
+  >
+    <mat-icon>navigate_before</mat-icon>
+    Back to Summer League Home
+  </a>
   <div
     id="summer-league-content"
     *ngIf="(routeName$ | async) === 'summer-league'"

@@ -5,12 +5,17 @@
     width: 90%;
     margin: 50px 5%;
 
+    .mat-header-cell {
+        font-size: 24px;
+    }
+
     .mat-column-name,
     .mat-column-position,
     .mat-column-pointDiff,
     .mat-column-wins,
     .mat-column-losses,
     .mat-column-winPct {
+        font-size: 24px;
         word-wrap: break-word !important;
         white-space: unset !important;
         overflow-wrap: break-word;
@@ -40,5 +45,9 @@
     .mat-column-winPct {
         width: 15% !important;
         flex: 0 0 15% !important;
+    }
+
+    .mat-column-position {
+        font-size: 30px;
     }
 }

@@ -1,0 +1,66 @@
+@import '~@angular/material/_theming';
+@import '../../../../common';
+$border-radius: 20px;
+
+.league-leaders {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: center;
+    margin-top: 40px;
+    position: relative;
+    width: 90%;
+    margin: 30px 5%;
+
+    .stat-cat {
+        @include mat-elevation(6);
+        color: #fff;
+        min-width: 120px;
+        width: 20%;
+        text-align: center;
+        padding: 10px 0 10px 0;
+        align-self: center;
+        border-radius: $border-radius 0 0 $border-radius;
+
+        .stat-cat-label {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+    }
+
+    .stat-cat-stats {
+        overflow: auto;
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        margin: 2px 0 0 0px;
+        min-width: 500px;
+        min-height: 89px;
+        width: 80%;
+        padding: $border-radius;
+
+        .players {
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+            @include mat-elevation(8);
+            height: 100%;
+            width: 80%;
+            padding: 0 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+
+            .player-wrapper {
+                @include mat-elevation(0);
+                font-size: 28px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+    }
+}

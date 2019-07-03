@@ -71,12 +71,12 @@ export class SummerLeagueComponent extends SmartComponent implements OnInit {
     this.navbarMenuItems = this.leagueName
       ? [
           build(MenuItem, {
-            routerLink: `/summer-league/${this.leagueName}/games`,
-            label: 'Games'
+            routerLink: `/summer-league/${this.leagueName}`,
+            label: `${this.leagueName} League`
           }),
           build(MenuItem, {
-            routerLink: `/summer-league/${this.leagueName}/standings`,
-            label: 'Standings'
+            routerLink: `/summer-league/${this.leagueName}/games`,
+            label: 'Games'
           }),
           build(MenuItem, {
             externalLink: `/assets/summer-league/${
@@ -89,6 +89,10 @@ export class SummerLeagueComponent extends SmartComponent implements OnInit {
               this.leagueName
             } Rosters.pdf`,
             label: 'Rosters'
+          }),
+          build(MenuItem, {
+            routerLink: `/summer-league/${this.leagueName}/standings`,
+            label: 'Standings'
           })
         ]
       : [

@@ -37,7 +37,8 @@ export class StandingsComponent extends SmartComponent implements OnInit {
         pointDiff: x.pointDiff,
         wins: x.wins,
         losses: x.losses,
-        winPct: x.winPct
+        winPct: x.winPct,
+        teamColor: x.teamColor
       };
     });
   }

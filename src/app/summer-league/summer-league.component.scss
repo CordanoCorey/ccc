@@ -5,6 +5,14 @@ mat-grid-list {
     width: 100%;
 }
 
+.back {
+    @include silver-hgradient();
+    position: absolute;
+    top: 7px;
+    left: 0px;
+    font-size: 24px;
+}
+
 ccc-summer-league-signup {
     @include mat-elevation(12);
     width: 40%;

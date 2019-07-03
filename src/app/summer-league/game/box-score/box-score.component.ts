@@ -26,7 +26,6 @@ export class BoxScoreComponent extends SmartComponent implements OnInit {
   }
 
   set boxScore(value: BoxScore) {
-    console.dir(value);
     this._boxScore = value;
     this.data = value.statlines;
   }

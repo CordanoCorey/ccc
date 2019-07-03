@@ -382,7 +382,7 @@ export const PLAYERS = [
   build(Player, { id: 44, firstName: 'JJ', lastName: 'Fenner' }),
   build(Player, { id: 45, firstName: 'Kenzo', lastName: 'Veron' }),
   build(Player, { id: 46, firstName: 'Millio', lastName: 'Millz' }),
-  build(Player, { id: 47, firstName: 'Preson', lastName: 'Stackfield' }),
+  build(Player, { id: 47, firstName: 'Preston', lastName: 'Stackfield' }),
   build(Player, { id: 48, firstName: 'Quentin', lastName: 'Stackfield' }),
   build(Player, { id: 49, firstName: 'Zion', lastName: 'Thomas' }),
   build(Player, {
