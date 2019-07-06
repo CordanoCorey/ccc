@@ -12,7 +12,7 @@ export class Player {
   isActive = true;
 
   get fullName(): string {
-    return `${this.firstName} ${this.lastName}`;
+    return `${this.nickname || this.firstName} ${this.lastName}`;
   }
 }
 
@@ -162,7 +162,7 @@ export class GamePlayer {
           [stat.statCategoryName.toLowerCase()]: stat.total
         });
       },
-      { number: this.jerseyNumber }
+      { number: this.jerseyNumber, playerName: this.playerName }
     );
   }
 }
