@@ -72,7 +72,7 @@ export class SummerLeagueComponent extends SmartComponent implements OnInit {
       ? [
           build(MenuItem, {
             routerLink: `/summer-league/${this.leagueName}`,
-            label: `${this.leagueName} League`
+            label: `League`
           }),
           build(MenuItem, {
             routerLink: `/summer-league/${this.leagueName}/games`,
