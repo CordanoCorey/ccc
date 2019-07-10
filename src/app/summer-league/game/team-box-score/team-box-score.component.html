@@ -1,19 +1,13 @@
 <div class="team-box-score">
   <h1 class="font-effect-emboss" [style.color]="teamColor">{{ teamName }}</h1>
-  <mat-table
-    class="box-score"
-    [dataSource]="dataSource"
-    class="mat-elevation-z8"
-  >
+  <mat-table class="box-score" [dataSource]="dataSource" class="mat-elevation-z8">
     <!-- <ng-container matColumnDef="team-name">
       <mat-header-cell *matHeaderCellDef>{{ teamName }}</mat-header-cell>
     </ng-container> -->
 
     <!-- Jersey Number Column -->
     <ng-container matColumnDef="number">
-      <mat-header-cell *matHeaderCellDef [style.width.px]="50"
-        >#</mat-header-cell
-      >
+      <mat-header-cell *matHeaderCellDef [style.width.px]="50">#</mat-header-cell>
       <mat-cell *matCellDef="let element" [style.width.px]="50">
         {{ element.number }}
       </mat-cell>
@@ -76,9 +70,6 @@
     ></tr> -->
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
-    <mat-footer-row
-      *matFooterRowDef="displayedColumns"
-      class="totals"
-    ></mat-footer-row>
+    <mat-footer-row *matFooterRowDef="displayedColumns" class="totals"></mat-footer-row>
   </mat-table>
 </div>
