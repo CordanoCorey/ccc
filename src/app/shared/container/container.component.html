@@ -1,28 +1,14 @@
 <ccc-header [isMobile]="isMobile"></ccc-header>
-<ccc-navbar
-  [isMobile]="isMobile"
-  [menuItems]="navbarMenuItems"
-  [width]="windowWidth"
-></ccc-navbar>
-<ccc-sidenav
-  *ngIf="!isMobile"
-  [style.height.px]="sidenavHeight"
-  [menuItems]="sidenavMenuItems"
-></ccc-sidenav>
+<ccc-navbar [isMobile]="isMobile" [menuItems]="navbarMenuItems" [width]="windowWidth"></ccc-navbar>
+<ccc-sidenav *ngIf="!isMobile" [style.height.px]="sidenavHeight" [menuItems]="sidenavMenuItems"></ccc-sidenav>
 <div
   id="content"
   [style.min-height.px]="windowHeight"
   [style.width.px]="windowWidth - offsetLeft"
+  [style.padding-right.px]="500"
   [style.left.px]="offsetLeft"
-  [style.background-image]="
-    backgroundImageUrl ? 'url(/assets/' + backgroundImageUrl + ')' : 'none'
-  "
+  [style.background-image]="backgroundImageUrl ? 'url(/assets/' + backgroundImageUrl + ')' : 'none'"
 >
   <ng-content></ng-content>
-  <ccc-wallpaper
-    *ngIf="hasWallpaper"
-    [images]="images"
-    [windowHeight]="windowHeight"
-    [windowWidth]="windowWidth"
-  ></ccc-wallpaper>
+  <ccc-wallpaper *ngIf="hasWallpaper" [images]="images" [windowHeight]="windowHeight" [windowWidth]="windowWidth"></ccc-wallpaper>
 </div>
