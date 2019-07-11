@@ -133,7 +133,8 @@ export function playerStatsSelector(store: Store<any>): Observable<Stat[]> {
           statCategoryName: build(StatCategory, statCats.find(y => y.id === x.statCategoryId)).name,
           gameId: gameTeam.gameId,
           gameTeamId: gamePlayer.gameTeamId,
-          playerId: gamePlayer.playerId
+          playerId: gamePlayer.playerId,
+          teamId: gameTeam.teamId
         });
       });
     }
@@ -200,15 +201,23 @@ export function leagueLeadersSelector(store: Store<any>, statCategoryId$: Observ
       map(stats => {
         const byPlayer = stats.reduce((acc, x) => {
           return Object.assign({}, acc, {
-            [x.playerId]: [...toArray(acc[x.playerId]), x.total]
+            [x.playerId]: [
+              ...toArray(acc[x.playerId]),
+              {
+                total: x.total,
+                teamId: x.teamId
+              }
+            ]
           });
         }, {});
         return Object.keys(byPlayer)
           .map(key => {
             const playerId = toInt(key);
+            const teamId = Array.isArray(byPlayer[playerId]) && byPlayer[playerId].length > 0 ? byPlayer[playerId][0]['teamId'] : 0;
             return build(Stat, {
               playerId,
-              total: average(toArray(byPlayer[playerId]))
+              teamId,
+              total: average(toArray(toArray(byPlayer[playerId]).map(x => x.total)))
             });
           })
           .sort((a, b) => compareNumbers(a.total, b.total))
@@ -217,13 +226,16 @@ export function leagueLeadersSelector(store: Store<any>, statCategoryId$: Observ
       })
     ),
     store.select('players'),
-    (stats, players) => {
+    store.select('teams'),
+    (stats, players, teams) => {
       return stats
         .map(stat => {
           const player = build(Player, players.get(stat.playerId));
+          const team = build(Team, teams.asArray.find(z => z.id === stat.teamId));
           return build(Stat, stat, {
             playerName: player.fullName,
-            isActive: player.isActive
+            isActive: player.isActive,
+            teamColor: team.color
           });
         })
         .filter(x => x['isActive'])

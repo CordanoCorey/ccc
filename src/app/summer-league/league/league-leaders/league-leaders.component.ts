@@ -5,10 +5,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { distinctUntilChanged, filter } from 'rxjs/operators';
 
 import { StatCategory, Stat } from '../../../shared/models';
-import {
-  statCategoriesSelector,
-  leagueLeadersSelector
-} from '../../../shared/selectors';
+import { statCategoriesSelector, leagueLeadersSelector } from '../../../shared/selectors';
 
 @Component({
   selector: 'ccc-league-leaders',
@@ -47,14 +44,15 @@ export class LeagueLeadersComponent extends SmartComponent implements OnInit {
 
   get color(): string {
     // return '#c0c0c0';
-    return '#8e8e8e';
+    return Array.isArray(this.leagueLeaders) && this.leagueLeaders.length > 0 ? this.leagueLeaders[0].teamColor : '#8e8e8e';
+  }
+
+  get labelColor(): string {
+    return this.color === 'yellow' ? '#000' : '#fff';
   }
 
   get statCategoryName(): string {
-    return build(
-      StatCategory,
-      this.statCategories.find(x => x.id === this.statCategoryId)
-    ).name;
+    return build(StatCategory, this.statCategories.find(x => x.id === this.statCategoryId)).name;
   }
 
   ngOnInit() {

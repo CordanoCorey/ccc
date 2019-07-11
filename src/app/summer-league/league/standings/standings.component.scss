@@ -42,10 +42,14 @@
         flex: 0 0 10% !important;
     }
 
-    .mat-column-pointDiff,
+    .mat-column-pointDiff {
+        width: 12% !important;
+        flex: 0 0 12% !important;
+    }
+
     .mat-column-winPct {
-        width: 15% !important;
-        flex: 0 0 15% !important;
+        width: 18% !important;
+        flex: 0 0 18% !important;
     }
 
     .mat-column-position {

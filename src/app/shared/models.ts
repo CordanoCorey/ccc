@@ -82,6 +82,8 @@ export class Stat {
   playerName = '';
   statCategoryId = 0;
   statCategoryName = '';
+  teamColor = '';
+  teamId = 0;
   total = 0;
 }
 
@@ -132,8 +134,7 @@ export class GameTeam {
   teamStats: TeamStat[] = [];
 
   get score(): number {
-    return build(TeamStat, this.teamStats.find(x => x.statCategoryId === 1))
-      .total;
+    return build(TeamStat, this.teamStats.find(x => x.statCategoryId === 1)).total;
   }
 
   get statlines(): any[] {
@@ -262,6 +263,4 @@ export class Image {
   }
 }
 
-export interface TypeConstructor<T> {
-  new (): T;
-}
+export type TypeConstructor<T> = new () => T;

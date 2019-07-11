@@ -1,3 +1,7 @@
+:host {
+    overflow: hidden;
+}
+
 #content {
     position: absolute;
     top: 124px;
@@ -7,6 +11,7 @@
     background-size: cover;
     background-position: center center;
     min-width: 500px;
+    overflow: scroll;
 }
 
 ccc-sidenav {

@@ -1,6 +1,8 @@
 @import '~@angular/material/theming';
+@import 'common';
 $ccc-primary: mat-palette($mat-green);
 $ccc-accent: mat-palette($mat-pink, A200, A100, A400);
 $ccc-warn: mat-palette($mat-red);
 $ccc-theme: mat-light-theme($ccc-primary, $ccc-accent, $ccc-warn);
 @include angular-material-theme($ccc-theme);
+@include scrollable(#000, #8e8e8e);
