@@ -222,7 +222,7 @@ export function leagueLeadersSelector(store: Store<any>, statCategoryId$: Observ
           })
           .sort((a, b) => compareNumbers(a.total, b.total))
           .reverse()
-          .filter((x, i) => i < 10);
+          .filter((x, i) => i < 15);
       })
     ),
     store.select('players'),
@@ -241,7 +241,7 @@ export function leagueLeadersSelector(store: Store<any>, statCategoryId$: Observ
         .filter(x => x['isActive'])
         .sort((a, b) => compareNumbers(a.total, b.total))
         .reverse()
-        .filter((x, i) => i < 5);
+        .filter((x, i) => i < 10);
     }
   );
 }

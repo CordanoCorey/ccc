@@ -48,7 +48,7 @@ export class LeagueLeadersComponent extends SmartComponent implements OnInit {
   }
 
   get labelColor(): string {
-    return this.color === 'yellow' ? '#000' : '#fff';
+    return this.color === 'black' ? '#8e8e8e' : '#000';
   }
 
   get statCategoryName(): string {

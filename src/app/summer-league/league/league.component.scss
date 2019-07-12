@@ -1,1 +1,9 @@
-#league {}
+#league {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ccc-standings {
+        width: 100%;
+    }
+}
