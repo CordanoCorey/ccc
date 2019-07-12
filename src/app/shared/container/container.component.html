@@ -9,7 +9,7 @@
   [style.left.px]="offsetLeft"
   [style.background-image]="backgroundImageUrl ? 'url(/assets/' + backgroundImageUrl + ')' : 'none'"
 > -->
-<div id="content" class="scrollable" [style.min-height.px]="windowHeight" [style.width.px]="windowWidth - offsetLeft" [style.left.px]="offsetLeft">
+<div id="content" [style.min-height.px]="windowHeight" [style.width.px]="windowWidth - offsetLeft" [style.left.px]="offsetLeft">
   <ng-content></ng-content>
   <ccc-wallpaper *ngIf="hasWallpaper" [images]="images" [windowHeight]="windowHeight" [windowWidth]="windowWidth"></ccc-wallpaper>
 </div>
