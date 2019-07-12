@@ -471,7 +471,7 @@ export const TEAM_STATS = [
   build(TeamStat, { gameTeamId: 51, statCategoryId: 1, total: 0 }),
   build(TeamStat, { gameTeamId: 52, statCategoryId: 1, total: 0 }),
   build(TeamStat, { gameTeamId: 53, statCategoryId: 1, total: 18 }),
-  build(TeamStat, { gameTeamId: 54, statCategoryId: 1, total: 61 }),
+  build(TeamStat, { gameTeamId: 54, statCategoryId: 1, total: 64 }),
   build(TeamStat, { gameTeamId: 55, statCategoryId: 1, total: 30 }),
   build(TeamStat, { gameTeamId: 56, statCategoryId: 1, total: 48 }),
   build(TeamStat, { gameTeamId: 57, statCategoryId: 1, total: 101 }),
