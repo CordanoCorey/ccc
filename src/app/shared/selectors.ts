@@ -93,7 +93,7 @@ export function gameTeamsSelector(store: Store<any>): Observable<GameTeam[]> {
         stats.find(y => y.statCategoryId === 1 && y.gameTeamId === build(GameTeam, gameTeams.find(z => z.gameId === gt.gameId && z.teamId !== gt.teamId)).id)
       ).total;
       gt.pointDiff = gt.score - opposingTeamPoints;
-      gt.gameResultTypeId = gt.pointDiff > 0 ? 1 : gt.pointDiff < 0 ? 2 : 3;
+      gt.gameResultTypeId = gt.gameResultTypeId === 0 ? (gt.pointDiff > 0 ? 1 : gt.pointDiff < 0 ? 2 : 3) : gt.gameResultTypeId;
       return gt;
     });
   });

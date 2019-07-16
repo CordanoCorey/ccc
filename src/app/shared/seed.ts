@@ -405,8 +405,8 @@ export const GAME_TEAMS = [
   build(GameTeam, { id: 48, gameId: 24, teamId: 15 }), // CVR
   build(GameTeam, { id: 49, gameId: 25, teamId: 2 }), // GBS
   build(GameTeam, { id: 50, gameId: 25, teamId: 5 }), // PBH
-  build(GameTeam, { id: 51, gameId: 26, teamId: 3 }), // CHA
-  build(GameTeam, { id: 52, gameId: 26, teamId: 6 }), // CCC
+  build(GameTeam, { id: 51, gameId: 26, teamId: 4, gameResultTypeId: 2 }), // CVR
+  build(GameTeam, { id: 52, gameId: 26, teamId: 6, gameResultTypeId: 1 }), // CCC
   build(GameTeam, { id: 53, gameId: 27, teamId: 8 }),
   build(GameTeam, { id: 54, gameId: 27, teamId: 10 }),
   build(GameTeam, { id: 55, gameId: 28, teamId: 11 }),
@@ -1202,7 +1202,7 @@ export const GAME_PLAYERS = [
   build(GamePlayer, {
     id: 134,
     gameTeamId: 20,
-    playerId: 106,
+    playerId: 85,
     jerseyNumber: '2'
   }),
   build(GamePlayer, {
