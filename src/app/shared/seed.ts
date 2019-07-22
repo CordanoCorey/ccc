@@ -351,6 +351,42 @@ export const GAMES = [
     startTime: new Date(2019, 6, 11, 19, 30),
     leagueId: 3,
     locationId: 3
+  }),
+  build(Game, {
+    id: 31,
+    startTime: new Date(2019, 6, 18, 18, 0),
+    leagueId: 1,
+    locationId: 2
+  }),
+  build(Game, {
+    id: 32,
+    startTime: new Date(2019, 6, 18, 18, 0),
+    leagueId: 1,
+    locationId: 3
+  }),
+  build(Game, {
+    id: 33,
+    startTime: new Date(2019, 6, 18, 19, 0),
+    leagueId: 2,
+    locationId: 2
+  }),
+  build(Game, {
+    id: 34,
+    startTime: new Date(2019, 6, 18, 19, 0),
+    leagueId: 2,
+    locationId: 3
+  }),
+  build(Game, {
+    id: 35,
+    startTime: new Date(2019, 6, 18, 20, 0),
+    leagueId: 3,
+    locationId: 2
+  }),
+  build(Game, {
+    id: 36,
+    startTime: new Date(2019, 6, 18, 20, 0),
+    leagueId: 3,
+    locationId: 3
   })
 ];
 
@@ -414,7 +450,19 @@ export const GAME_TEAMS = [
   build(GameTeam, { id: 57, gameId: 29, teamId: 13 }),
   build(GameTeam, { id: 58, gameId: 29, teamId: 16 }),
   build(GameTeam, { id: 59, gameId: 30, teamId: 12 }),
-  build(GameTeam, { id: 60, gameId: 30, teamId: 14 })
+  build(GameTeam, { id: 60, gameId: 30, teamId: 14 }),
+  build(GameTeam, { id: 61, gameId: 31, teamId: 4 }),
+  build(GameTeam, { id: 62, gameId: 31, teamId: 5 }),
+  build(GameTeam, { id: 63, gameId: 32, teamId: 1 }),
+  build(GameTeam, { id: 64, gameId: 32, teamId: 6 }),
+  build(GameTeam, { id: 65, gameId: 33, teamId: 7, gameResultTypeId: 1 }),
+  build(GameTeam, { id: 66, gameId: 33, teamId: 8, gameResultTypeId: 2 }),
+  build(GameTeam, { id: 67, gameId: 34, teamId: 11 }),
+  build(GameTeam, { id: 68, gameId: 34, teamId: 10 }),
+  build(GameTeam, { id: 69, gameId: 35, teamId: 12, gameResultTypeId: 2 }),
+  build(GameTeam, { id: 70, gameId: 35, teamId: 16, gameResultTypeId: 1 }),
+  build(GameTeam, { id: 71, gameId: 36, teamId: 15 }),
+  build(GameTeam, { id: 72, gameId: 36, teamId: 14 })
 ];
 
 export const TEAM_STATS = [
@@ -477,7 +525,19 @@ export const TEAM_STATS = [
   build(TeamStat, { gameTeamId: 57, statCategoryId: 1, total: 101 }),
   build(TeamStat, { gameTeamId: 58, statCategoryId: 1, total: 89 }),
   build(TeamStat, { gameTeamId: 59, statCategoryId: 1, total: 57 }),
-  build(TeamStat, { gameTeamId: 60, statCategoryId: 1, total: 65 })
+  build(TeamStat, { gameTeamId: 60, statCategoryId: 1, total: 65 }),
+  build(TeamStat, { gameTeamId: 61, statCategoryId: 1, total: 16 }),
+  build(TeamStat, { gameTeamId: 62, statCategoryId: 1, total: 33 }),
+  build(TeamStat, { gameTeamId: 63, statCategoryId: 1, total: 16 }),
+  build(TeamStat, { gameTeamId: 64, statCategoryId: 1, total: 15 }),
+  build(TeamStat, { gameTeamId: 65, statCategoryId: 1, total: 0 }),
+  build(TeamStat, { gameTeamId: 66, statCategoryId: 1, total: 0 }),
+  build(TeamStat, { gameTeamId: 67, statCategoryId: 1, total: 13 }),
+  build(TeamStat, { gameTeamId: 68, statCategoryId: 1, total: 55 }),
+  build(TeamStat, { gameTeamId: 69, statCategoryId: 1, total: 0 }),
+  build(TeamStat, { gameTeamId: 70, statCategoryId: 1, total: 0 }),
+  build(TeamStat, { gameTeamId: 71, statCategoryId: 1, total: 38 }),
+  build(TeamStat, { gameTeamId: 72, statCategoryId: 1, total: 67 })
 ];
 
 export const PLAYERS = [

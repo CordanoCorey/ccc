@@ -52,11 +52,21 @@
         flex: 0 0 18% !important;
     }
 
-    .mat-column-position {
-        font-size: 30px;
+    .mat-cell, .mat-header-cell {
+        align-items: center;
+        flex-direction: column;
+        span {
+            margin: auto;
+        }
     }
 
-    .mat-column-pointDiff {
-        text-align: center;
+    .mat-header-cell {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        min-height: 20px;
+    }
+
+    .mat-column-position {
+        font-size: 30px;
     }
 }
