@@ -172,380 +172,620 @@ export const TEAMS = [
 ];
 
 export const GAMES = [
-  build(Game, {
-    id: 1,
-    startTime: new Date(2019, 5, 25, 17, 30),
-    leagueId: 1,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 2,
-    startTime: new Date(2019, 5, 25, 17, 30),
-    leagueId: 1,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 3,
-    startTime: new Date(2019, 5, 25, 18, 30),
-    leagueId: 2,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 4,
-    startTime: new Date(2019, 5, 25, 18, 30),
-    leagueId: 2,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 5,
-    startTime: new Date(2019, 5, 25, 19, 30),
-    leagueId: 3,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 6,
-    startTime: new Date(2019, 5, 25, 19, 30),
-    leagueId: 3,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 7,
-    startTime: new Date(2019, 5, 27, 17, 30),
-    leagueId: 1,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 8,
-    startTime: new Date(2019, 5, 27, 17, 30),
-    leagueId: 1,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 9,
-    startTime: new Date(2019, 5, 27, 18, 30),
-    leagueId: 2,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 10,
-    startTime: new Date(2019, 5, 27, 18, 30),
-    leagueId: 2,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 11,
-    startTime: new Date(2019, 5, 27, 19, 30),
-    leagueId: 3,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 12,
-    startTime: new Date(2019, 5, 27, 19, 30),
-    leagueId: 3,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 13,
-    startTime: new Date(2019, 6, 3, 17, 30),
-    leagueId: 1,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 14,
-    startTime: new Date(2019, 6, 3, 17, 30),
-    leagueId: 1,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 15,
-    startTime: new Date(2019, 6, 3, 18, 30),
-    leagueId: 2,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 16,
-    startTime: new Date(2019, 6, 3, 18, 30),
-    leagueId: 2,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 17,
-    startTime: new Date(2019, 6, 3, 19, 30),
-    leagueId: 3,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 18,
-    startTime: new Date(2019, 6, 3, 19, 30),
-    leagueId: 3,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 19,
-    startTime: new Date(2019, 6, 9, 17, 30),
-    leagueId: 1,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 20,
-    startTime: new Date(2019, 6, 9, 17, 30),
-    leagueId: 1,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 21,
-    startTime: new Date(2019, 6, 9, 18, 30),
-    leagueId: 2,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 22,
-    startTime: new Date(2019, 6, 9, 18, 30),
-    leagueId: 2,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 23,
-    startTime: new Date(2019, 6, 9, 19, 30),
-    leagueId: 3,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 24,
-    startTime: new Date(2019, 6, 9, 19, 30),
-    leagueId: 3,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 25,
-    startTime: new Date(2019, 6, 9, 20, 30),
-    leagueId: 1,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 26,
-    startTime: new Date(2019, 6, 9, 20, 30),
-    leagueId: 1,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 27,
-    startTime: new Date(2019, 6, 11, 18, 30),
-    leagueId: 2,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 28,
-    startTime: new Date(2019, 6, 11, 18, 30),
-    leagueId: 2,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 29,
-    startTime: new Date(2019, 6, 11, 19, 30),
-    leagueId: 3,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 30,
-    startTime: new Date(2019, 6, 11, 19, 30),
-    leagueId: 3,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 31,
-    startTime: new Date(2019, 6, 18, 18, 0),
-    leagueId: 1,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 32,
-    startTime: new Date(2019, 6, 18, 18, 0),
-    leagueId: 1,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 33,
-    startTime: new Date(2019, 6, 18, 19, 0),
-    leagueId: 2,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 34,
-    startTime: new Date(2019, 6, 18, 19, 0),
-    leagueId: 2,
-    locationId: 3
-  }),
-  build(Game, {
-    id: 35,
-    startTime: new Date(2019, 6, 18, 20, 0),
-    leagueId: 3,
-    locationId: 2
-  }),
-  build(Game, {
-    id: 36,
-    startTime: new Date(2019, 6, 18, 20, 0),
-    leagueId: 3,
-    locationId: 3
-  })
-];
+         build(Game, {
+           id: 1,
+           startTime: new Date(2019, 5, 25, 17, 30),
+           leagueId: 1,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 2,
+           startTime: new Date(2019, 5, 25, 17, 30),
+           leagueId: 1,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 3,
+           startTime: new Date(2019, 5, 25, 18, 30),
+           leagueId: 2,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 4,
+           startTime: new Date(2019, 5, 25, 18, 30),
+           leagueId: 2,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 5,
+           startTime: new Date(2019, 5, 25, 19, 30),
+           leagueId: 3,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 6,
+           startTime: new Date(2019, 5, 25, 19, 30),
+           leagueId: 3,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 7,
+           startTime: new Date(2019, 5, 27, 17, 30),
+           leagueId: 1,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 8,
+           startTime: new Date(2019, 5, 27, 17, 30),
+           leagueId: 1,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 9,
+           startTime: new Date(2019, 5, 27, 18, 30),
+           leagueId: 2,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 10,
+           startTime: new Date(2019, 5, 27, 18, 30),
+           leagueId: 2,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 11,
+           startTime: new Date(2019, 5, 27, 19, 30),
+           leagueId: 3,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 12,
+           startTime: new Date(2019, 5, 27, 19, 30),
+           leagueId: 3,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 13,
+           startTime: new Date(2019, 6, 3, 17, 30),
+           leagueId: 1,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 14,
+           startTime: new Date(2019, 6, 3, 17, 30),
+           leagueId: 1,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 15,
+           startTime: new Date(2019, 6, 3, 18, 30),
+           leagueId: 2,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 16,
+           startTime: new Date(2019, 6, 3, 18, 30),
+           leagueId: 2,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 17,
+           startTime: new Date(2019, 6, 3, 19, 30),
+           leagueId: 3,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 18,
+           startTime: new Date(2019, 6, 3, 19, 30),
+           leagueId: 3,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 19,
+           startTime: new Date(2019, 6, 9, 17, 30),
+           leagueId: 1,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 20,
+           startTime: new Date(2019, 6, 9, 17, 30),
+           leagueId: 1,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 21,
+           startTime: new Date(2019, 6, 9, 18, 30),
+           leagueId: 2,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 22,
+           startTime: new Date(2019, 6, 9, 18, 30),
+           leagueId: 2,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 23,
+           startTime: new Date(2019, 6, 9, 19, 30),
+           leagueId: 3,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 24,
+           startTime: new Date(2019, 6, 9, 19, 30),
+           leagueId: 3,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 25,
+           startTime: new Date(2019, 6, 9, 20, 30),
+           leagueId: 1,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 26,
+           startTime: new Date(2019, 6, 9, 20, 30),
+           leagueId: 1,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 27,
+           startTime: new Date(2019, 6, 11, 18, 30),
+           leagueId: 2,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 28,
+           startTime: new Date(2019, 6, 11, 18, 30),
+           leagueId: 2,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 29,
+           startTime: new Date(2019, 6, 11, 19, 30),
+           leagueId: 3,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 30,
+           startTime: new Date(2019, 6, 11, 19, 30),
+           leagueId: 3,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 31,
+           startTime: new Date(2019, 6, 18, 18, 0),
+           leagueId: 1,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 32,
+           startTime: new Date(2019, 6, 18, 18, 0),
+           leagueId: 1,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 33,
+           startTime: new Date(2019, 6, 18, 19, 0),
+           leagueId: 2,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 34,
+           startTime: new Date(2019, 6, 18, 19, 0),
+           leagueId: 2,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 35,
+           startTime: new Date(2019, 6, 18, 20, 0),
+           leagueId: 3,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 36,
+           startTime: new Date(2019, 6, 18, 20, 0),
+           leagueId: 3,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 37,
+           startTime: new Date(2019, 6, 23, 17, 30),
+           leagueId: 1,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 38,
+           startTime: new Date(2019, 6, 23, 17, 30),
+           leagueId: 1,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 39,
+           startTime: new Date(2019, 6, 23, 18, 30),
+           leagueId: 2,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 40,
+           startTime: new Date(2019, 6, 23, 18, 30),
+           leagueId: 2,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 41,
+           startTime: new Date(2019, 6, 23, 19, 30),
+           leagueId: 3,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 42,
+           startTime: new Date(2019, 6, 23, 19, 30),
+           leagueId: 3,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 43,
+           startTime: new Date(2019, 6, 23, 20, 30),
+           leagueId: 2,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 44,
+           startTime: new Date(2019, 6, 23, 20, 30),
+           leagueId: 2,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 45,
+           startTime: new Date(2019, 6, 24, 17, 30),
+           leagueId: 1,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 46,
+           startTime: new Date(2019, 6, 24, 17, 30),
+           leagueId: 1,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 47,
+           startTime: new Date(2019, 6, 24, 18, 30),
+           leagueId: 2,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 48,
+           startTime: new Date(2019, 6, 24, 18, 30),
+           leagueId: 2,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 49,
+           startTime: new Date(2019, 6, 24, 19, 30),
+           leagueId: 3,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 50,
+           startTime: new Date(2019, 6, 24, 19, 30),
+           leagueId: 3,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 51,
+           startTime: new Date(2019, 6, 24, 20, 30),
+           leagueId: 3,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 52,
+           startTime: new Date(2019, 6, 24, 20, 30),
+           leagueId: 3,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 53,
+           startTime: new Date(2019, 6, 25, 17, 30),
+           leagueId: 1,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 54,
+           startTime: new Date(2019, 6, 25, 17, 30),
+           leagueId: 1,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 55,
+           startTime: new Date(2019, 6, 25, 18, 30),
+           leagueId: 2,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 56,
+           startTime: new Date(2019, 6, 25, 18, 30),
+           leagueId: 2,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 57,
+           startTime: new Date(2019, 6, 25, 19, 30),
+           leagueId: 3,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 58,
+           startTime: new Date(2019, 6, 25, 19, 30),
+           leagueId: 3,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 59,
+           startTime: new Date(2019, 6, 25, 20, 30),
+           leagueId: 1,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 60,
+           startTime: new Date(2019, 6, 25, 20, 30),
+           leagueId: 1,
+           locationId: 3
+         })
+       ];
 
 export const GAME_TEAMS = [
-  build(GameTeam, { id: 1, gameId: 1, teamId: 1 }),
-  build(GameTeam, { id: 2, gameId: 1, teamId: 2 }),
-  build(GameTeam, { id: 3, gameId: 2, teamId: 3 }),
-  build(GameTeam, { id: 4, gameId: 2, teamId: 4 }),
-  build(GameTeam, { id: 5, gameId: 3, teamId: 11 }),
-  build(GameTeam, { id: 6, gameId: 3, teamId: 10 }),
-  build(GameTeam, { id: 7, gameId: 4, teamId: 9 }),
-  build(GameTeam, { id: 8, gameId: 4, teamId: 8 }),
-  build(GameTeam, { id: 9, gameId: 5, teamId: 12 }),
-  build(GameTeam, { id: 10, gameId: 5, teamId: 14 }),
-  build(GameTeam, { id: 11, gameId: 6, teamId: 16 }),
-  build(GameTeam, { id: 12, gameId: 6, teamId: 13 }),
-  build(GameTeam, { id: 13, gameId: 7, teamId: 5 }),
-  build(GameTeam, { id: 14, gameId: 7, teamId: 6 }),
-  build(GameTeam, { id: 15, gameId: 8, teamId: 1 }),
-  build(GameTeam, { id: 16, gameId: 8, teamId: 3 }),
-  build(GameTeam, { id: 17, gameId: 9, teamId: 7 }),
-  build(GameTeam, { id: 18, gameId: 9, teamId: 9 }),
-  build(GameTeam, { id: 19, gameId: 10, teamId: 11 }),
-  build(GameTeam, { id: 20, gameId: 10, teamId: 8 }),
-  build(GameTeam, { id: 21, gameId: 11, teamId: 16 }),
-  build(GameTeam, { id: 22, gameId: 11, teamId: 12 }),
-  build(GameTeam, { id: 23, gameId: 12, teamId: 13 }),
-  build(GameTeam, { id: 24, gameId: 12, teamId: 15 }),
-  build(GameTeam, { id: 25, gameId: 13, teamId: 1 }),
-  build(GameTeam, { id: 26, gameId: 13, teamId: 5 }),
-  build(GameTeam, { id: 27, gameId: 14, teamId: 3 }),
-  build(GameTeam, { id: 28, gameId: 14, teamId: 6 }),
-  build(GameTeam, { id: 29, gameId: 15, teamId: 10 }),
-  build(GameTeam, { id: 30, gameId: 15, teamId: 7 }),
-  build(GameTeam, { id: 31, gameId: 16, teamId: 11 }),
-  build(GameTeam, { id: 32, gameId: 16, teamId: 9 }),
-  build(GameTeam, { id: 33, gameId: 17, teamId: 13 }),
-  build(GameTeam, { id: 34, gameId: 17, teamId: 14 }),
-  build(GameTeam, { id: 35, gameId: 18, teamId: 16 }),
-  build(GameTeam, { id: 36, gameId: 18, teamId: 15 }),
-  build(GameTeam, { id: 37, gameId: 19, teamId: 4 }), // CVR
-  build(GameTeam, { id: 38, gameId: 19, teamId: 2 }), // GBS
-  build(GameTeam, { id: 39, gameId: 20, teamId: 1 }), // C-Luv
-  build(GameTeam, { id: 40, gameId: 20, teamId: 3 }), // CHA
-  build(GameTeam, { id: 41, gameId: 21, teamId: 7 }), // C-Luv
-  build(GameTeam, { id: 42, gameId: 21, teamId: 8 }), // GBS
-  build(GameTeam, { id: 43, gameId: 22, teamId: 9 }), // CHA
-  build(GameTeam, { id: 44, gameId: 22, teamId: 10 }), // CVR
-  build(GameTeam, { id: 45, gameId: 23, teamId: 12 }), // C-Luv
-  build(GameTeam, { id: 46, gameId: 23, teamId: 13 }), // GBS
-  build(GameTeam, { id: 47, gameId: 24, teamId: 14 }), // CHA
-  build(GameTeam, { id: 48, gameId: 24, teamId: 15 }), // CVR
-  build(GameTeam, { id: 49, gameId: 25, teamId: 2 }), // GBS
-  build(GameTeam, { id: 50, gameId: 25, teamId: 5 }), // PBH
-  build(GameTeam, { id: 51, gameId: 26, teamId: 4, gameResultTypeId: 2 }), // CVR
-  build(GameTeam, { id: 52, gameId: 26, teamId: 6, gameResultTypeId: 1 }), // CCC
-  build(GameTeam, { id: 53, gameId: 27, teamId: 8 }),
-  build(GameTeam, { id: 54, gameId: 27, teamId: 10 }),
-  build(GameTeam, { id: 55, gameId: 28, teamId: 11 }),
-  build(GameTeam, { id: 56, gameId: 28, teamId: 9 }),
-  build(GameTeam, { id: 57, gameId: 29, teamId: 13 }),
-  build(GameTeam, { id: 58, gameId: 29, teamId: 16 }),
-  build(GameTeam, { id: 59, gameId: 30, teamId: 12 }),
-  build(GameTeam, { id: 60, gameId: 30, teamId: 14 }),
-  build(GameTeam, { id: 61, gameId: 31, teamId: 4 }),
-  build(GameTeam, { id: 62, gameId: 31, teamId: 5 }),
-  build(GameTeam, { id: 63, gameId: 32, teamId: 1 }),
-  build(GameTeam, { id: 64, gameId: 32, teamId: 6 }),
-  build(GameTeam, { id: 65, gameId: 33, teamId: 7, gameResultTypeId: 1 }),
-  build(GameTeam, { id: 66, gameId: 33, teamId: 8, gameResultTypeId: 2 }),
-  build(GameTeam, { id: 67, gameId: 34, teamId: 11 }),
-  build(GameTeam, { id: 68, gameId: 34, teamId: 10 }),
-  build(GameTeam, { id: 69, gameId: 35, teamId: 12, gameResultTypeId: 2 }),
-  build(GameTeam, { id: 70, gameId: 35, teamId: 16, gameResultTypeId: 1 }),
-  build(GameTeam, { id: 71, gameId: 36, teamId: 15 }),
-  build(GameTeam, { id: 72, gameId: 36, teamId: 14 })
-];
+         build(GameTeam, { id: 1, gameId: 1, teamId: 1 }),
+         build(GameTeam, { id: 2, gameId: 1, teamId: 2 }),
+         build(GameTeam, { id: 3, gameId: 2, teamId: 3 }),
+         build(GameTeam, { id: 4, gameId: 2, teamId: 4 }),
+         build(GameTeam, { id: 5, gameId: 3, teamId: 11 }),
+         build(GameTeam, { id: 6, gameId: 3, teamId: 10 }),
+         build(GameTeam, { id: 7, gameId: 4, teamId: 9 }),
+         build(GameTeam, { id: 8, gameId: 4, teamId: 8 }),
+         build(GameTeam, { id: 9, gameId: 5, teamId: 12 }),
+         build(GameTeam, { id: 10, gameId: 5, teamId: 14 }),
+         build(GameTeam, { id: 11, gameId: 6, teamId: 16 }),
+         build(GameTeam, { id: 12, gameId: 6, teamId: 13 }),
+         build(GameTeam, { id: 13, gameId: 7, teamId: 5 }),
+         build(GameTeam, { id: 14, gameId: 7, teamId: 6 }),
+         build(GameTeam, { id: 15, gameId: 8, teamId: 1 }),
+         build(GameTeam, { id: 16, gameId: 8, teamId: 3 }),
+         build(GameTeam, { id: 17, gameId: 9, teamId: 7 }),
+         build(GameTeam, { id: 18, gameId: 9, teamId: 9 }),
+         build(GameTeam, { id: 19, gameId: 10, teamId: 11 }),
+         build(GameTeam, { id: 20, gameId: 10, teamId: 8 }),
+         build(GameTeam, { id: 21, gameId: 11, teamId: 16 }),
+         build(GameTeam, { id: 22, gameId: 11, teamId: 12 }),
+         build(GameTeam, { id: 23, gameId: 12, teamId: 13 }),
+         build(GameTeam, { id: 24, gameId: 12, teamId: 15 }),
+         build(GameTeam, { id: 25, gameId: 13, teamId: 1 }),
+         build(GameTeam, { id: 26, gameId: 13, teamId: 5 }),
+         build(GameTeam, { id: 27, gameId: 14, teamId: 3 }),
+         build(GameTeam, { id: 28, gameId: 14, teamId: 6 }),
+         build(GameTeam, { id: 29, gameId: 15, teamId: 10 }),
+         build(GameTeam, { id: 30, gameId: 15, teamId: 7 }),
+         build(GameTeam, { id: 31, gameId: 16, teamId: 11 }),
+         build(GameTeam, { id: 32, gameId: 16, teamId: 9 }),
+         build(GameTeam, { id: 33, gameId: 17, teamId: 13 }),
+         build(GameTeam, { id: 34, gameId: 17, teamId: 14 }),
+         build(GameTeam, { id: 35, gameId: 18, teamId: 16 }),
+         build(GameTeam, { id: 36, gameId: 18, teamId: 15 }),
+         build(GameTeam, { id: 37, gameId: 19, teamId: 4 }), // CVR
+         build(GameTeam, { id: 38, gameId: 19, teamId: 2 }), // GBS
+         build(GameTeam, { id: 39, gameId: 20, teamId: 1 }), // C-Luv
+         build(GameTeam, { id: 40, gameId: 20, teamId: 3 }), // CHA
+         build(GameTeam, { id: 41, gameId: 21, teamId: 7 }), // C-Luv
+         build(GameTeam, { id: 42, gameId: 21, teamId: 8 }), // GBS
+         build(GameTeam, { id: 43, gameId: 22, teamId: 9 }), // CHA
+         build(GameTeam, { id: 44, gameId: 22, teamId: 10 }), // CVR
+         build(GameTeam, { id: 45, gameId: 23, teamId: 12 }), // C-Luv
+         build(GameTeam, { id: 46, gameId: 23, teamId: 13 }), // GBS
+         build(GameTeam, { id: 47, gameId: 24, teamId: 14 }), // CHA
+         build(GameTeam, { id: 48, gameId: 24, teamId: 15 }), // CVR
+         build(GameTeam, { id: 49, gameId: 25, teamId: 2 }), // GBS
+         build(GameTeam, { id: 50, gameId: 25, teamId: 5 }), // PBH
+         build(GameTeam, { id: 51, gameId: 26, teamId: 4, gameResultTypeId: 2 }), // CVR
+         build(GameTeam, { id: 52, gameId: 26, teamId: 6, gameResultTypeId: 1 }), // CCC
+         build(GameTeam, { id: 53, gameId: 27, teamId: 8 }),
+         build(GameTeam, { id: 54, gameId: 27, teamId: 10 }),
+         build(GameTeam, { id: 55, gameId: 28, teamId: 11 }),
+         build(GameTeam, { id: 56, gameId: 28, teamId: 9 }),
+         build(GameTeam, { id: 57, gameId: 29, teamId: 13 }),
+         build(GameTeam, { id: 58, gameId: 29, teamId: 16 }),
+         build(GameTeam, { id: 59, gameId: 30, teamId: 12 }),
+         build(GameTeam, { id: 60, gameId: 30, teamId: 14 }),
+         build(GameTeam, { id: 61, gameId: 31, teamId: 4 }),
+         build(GameTeam, { id: 62, gameId: 31, teamId: 5 }),
+         build(GameTeam, { id: 63, gameId: 32, teamId: 1 }),
+         build(GameTeam, { id: 64, gameId: 32, teamId: 6 }),
+         build(GameTeam, { id: 65, gameId: 33, teamId: 7, gameResultTypeId: 1 }),
+         build(GameTeam, { id: 66, gameId: 33, teamId: 8, gameResultTypeId: 2 }),
+         build(GameTeam, { id: 67, gameId: 34, teamId: 11 }),
+         build(GameTeam, { id: 68, gameId: 34, teamId: 10 }),
+         build(GameTeam, { id: 69, gameId: 35, teamId: 12, gameResultTypeId: 2 }),
+         build(GameTeam, { id: 70, gameId: 35, teamId: 16, gameResultTypeId: 1 }),
+         build(GameTeam, { id: 71, gameId: 36, teamId: 15 }),
+         build(GameTeam, { id: 72, gameId: 36, teamId: 14 }),
+         build(GameTeam, { id: 73, gameId: 37, teamId: 3 }),
+         build(GameTeam, { id: 74, gameId: 37, teamId: 1 }),
+         build(GameTeam, { id: 75, gameId: 38, teamId: 2 }),
+         build(GameTeam, { id: 76, gameId: 38, teamId: 4 }),
+         build(GameTeam, { id: 77, gameId: 39, teamId: 7 }),
+         build(GameTeam, { id: 78, gameId: 39, teamId: 11 }),
+         build(GameTeam, { id: 79, gameId: 40, teamId: 10 }),
+         build(GameTeam, { id: 80, gameId: 40, teamId: 9 }),
+         build(GameTeam, { id: 81, gameId: 41, teamId: 13, gameResultTypeId: 1 }),
+         build(GameTeam, { id: 82, gameId: 41, teamId: 15, gameResultTypeId: 2 }),
+         build(GameTeam, { id: 83, gameId: 42, teamId: 16, gameResultTypeId: 1 }),
+         build(GameTeam, { id: 84, gameId: 42, teamId: 14, gameResultTypeId: 2 }),
+         build(GameTeam, { id: 85, gameId: 43, teamId: 11 }),
+         build(GameTeam, { id: 86, gameId: 43, teamId: 7 }),
+         build(GameTeam, { id: 87, gameId: 44, teamId: 8 }),
+         build(GameTeam, { id: 88, gameId: 44, teamId: 10 }),
+         build(GameTeam, { id: 89, gameId: 45, teamId: 6 }),
+         build(GameTeam, { id: 90, gameId: 45, teamId: 2 }),
+         build(GameTeam, { id: 91, gameId: 46, teamId: 5 }),
+         build(GameTeam, { id: 92, gameId: 46, teamId: 4 }),
+         build(GameTeam, { id: 93, gameId: 47, teamId: 7 }),
+         build(GameTeam, { id: 94, gameId: 47, teamId: 9 }),
+         build(GameTeam, { id: 95, gameId: 48, teamId: 8 }),
+         build(GameTeam, { id: 96, gameId: 48, teamId: 11 }),
+         build(GameTeam, { id: 97, gameId: 49, teamId: 15, gameResultTypeId: 2 }),
+         build(GameTeam, { id: 98, gameId: 49, teamId: 12, gameResultTypeId: 1 }),
+         build(GameTeam, { id: 99, gameId: 50, teamId: 16 }),
+         build(GameTeam, { id: 100, gameId: 50, teamId: 14 }),
+         build(GameTeam, { id: 101, gameId: 51, teamId: 13 }),
+         build(GameTeam, { id: 102, gameId: 51, teamId: 12 }),
+         build(GameTeam, { id: 103, gameId: 52, teamId: 16 }),
+         build(GameTeam, { id: 104, gameId: 52, teamId: 15 }),
+         build(GameTeam, { id: 105, gameId: 53, teamId: 6 }),
+         build(GameTeam, { id: 106, gameId: 53, teamId: 2 }),
+         build(GameTeam, { id: 107, gameId: 54, teamId: 5 }),
+         build(GameTeam, { id: 108, gameId: 54, teamId: 3 }),
+         build(GameTeam, { id: 109, gameId: 55, teamId: 9 }),
+         build(GameTeam, { id: 110, gameId: 55, teamId: 8 }),
+         build(GameTeam, { id: 111, gameId: 56, teamId: 10 }),
+         build(GameTeam, { id: 112, gameId: 56, teamId: 7 }),
+         build(GameTeam, { id: 113, gameId: 57, teamId: 14 }),
+         build(GameTeam, { id: 114, gameId: 57, teamId: 13 }),
+         build(GameTeam, { id: 115, gameId: 58, teamId: 15 }),
+         build(GameTeam, { id: 116, gameId: 58, teamId: 12 }),
+         build(GameTeam, { id: 117, gameId: 59, teamId: 3 }),
+         build(GameTeam, { id: 118, gameId: 59, teamId: 6 }),
+         build(GameTeam, { id: 119, gameId: 60, teamId: 1 }),
+         build(GameTeam, { id: 120, gameId: 60, teamId: 2 })
+       ];
 
 export const TEAM_STATS = [
-  build(TeamStat, { gameTeamId: 1, statCategoryId: 1, total: 27 }),
-  build(TeamStat, { gameTeamId: 2, statCategoryId: 1, total: 12 }),
-  build(TeamStat, { gameTeamId: 3, statCategoryId: 1, total: 21 }),
-  build(TeamStat, { gameTeamId: 4, statCategoryId: 1, total: 18 }),
-  build(TeamStat, { gameTeamId: 5, statCategoryId: 1, total: 12 }),
-  build(TeamStat, { gameTeamId: 6, statCategoryId: 1, total: 58 }),
-  build(TeamStat, { gameTeamId: 7, statCategoryId: 1, total: 46 }),
-  build(TeamStat, { gameTeamId: 8, statCategoryId: 1, total: 10 }),
-  build(TeamStat, { gameTeamId: 9, statCategoryId: 1, total: 62 }),
-  build(TeamStat, { gameTeamId: 10, statCategoryId: 1, total: 57 }),
-  build(TeamStat, { gameTeamId: 11, statCategoryId: 1, total: 94 }),
-  build(TeamStat, { gameTeamId: 12, statCategoryId: 1, total: 62 }), // 14U - GBS
-  build(TeamStat, { gameTeamId: 13, statCategoryId: 1, total: 10 }),
-  build(TeamStat, { gameTeamId: 14, statCategoryId: 1, total: 30 }),
-  build(TeamStat, { gameTeamId: 15, statCategoryId: 1, total: 16 }),
-  build(TeamStat, { gameTeamId: 16, statCategoryId: 1, total: 21 }),
-  build(TeamStat, { gameTeamId: 17, statCategoryId: 1, total: 30 }),
-  build(TeamStat, { gameTeamId: 18, statCategoryId: 1, total: 56 }),
-  build(TeamStat, { gameTeamId: 19, statCategoryId: 1, total: 28 }),
-  build(TeamStat, { gameTeamId: 20, statCategoryId: 1, total: 40 }),
-  build(TeamStat, { gameTeamId: 21, statCategoryId: 1, total: 106 }),
-  build(TeamStat, { gameTeamId: 22, statCategoryId: 1, total: 76 }),
-  build(TeamStat, { gameTeamId: 23, statCategoryId: 1, total: 75 }), // 14U - GBS
-  build(TeamStat, { gameTeamId: 24, statCategoryId: 1, total: 38 }),
-  build(TeamStat, { gameTeamId: 25, statCategoryId: 1, total: 32 }),
-  build(TeamStat, { gameTeamId: 26, statCategoryId: 1, total: 26 }),
-  build(TeamStat, { gameTeamId: 27, statCategoryId: 1, total: 19 }),
-  build(TeamStat, { gameTeamId: 28, statCategoryId: 1, total: 21 }),
-  build(TeamStat, { gameTeamId: 29, statCategoryId: 1, total: 50 }),
-  build(TeamStat, { gameTeamId: 30, statCategoryId: 1, total: 26 }),
-  build(TeamStat, { gameTeamId: 31, statCategoryId: 1, total: 21 }),
-  build(TeamStat, { gameTeamId: 32, statCategoryId: 1, total: 53 }),
-  build(TeamStat, { gameTeamId: 33, statCategoryId: 1, total: 48 }), // 14U - GBS
-  build(TeamStat, { gameTeamId: 34, statCategoryId: 1, total: 56 }),
-  build(TeamStat, { gameTeamId: 35, statCategoryId: 1, total: 116 }),
-  build(TeamStat, { gameTeamId: 36, statCategoryId: 1, total: 44 }),
-  build(TeamStat, { gameTeamId: 37, statCategoryId: 1, total: 14 }),
-  build(TeamStat, { gameTeamId: 38, statCategoryId: 1, total: 20 }),
-  build(TeamStat, { gameTeamId: 39, statCategoryId: 1, total: 23 }),
-  build(TeamStat, { gameTeamId: 40, statCategoryId: 1, total: 32 }),
-  build(TeamStat, { gameTeamId: 41, statCategoryId: 1, total: 47 }),
-  build(TeamStat, { gameTeamId: 42, statCategoryId: 1, total: 36 }),
-  build(TeamStat, { gameTeamId: 43, statCategoryId: 1, total: 44 }),
-  build(TeamStat, { gameTeamId: 44, statCategoryId: 1, total: 52 }),
-  build(TeamStat, { gameTeamId: 45, statCategoryId: 1, total: 61 }),
-  build(TeamStat, { gameTeamId: 46, statCategoryId: 1, total: 68 }), // 14U - GBS
-  build(TeamStat, { gameTeamId: 47, statCategoryId: 1, total: 57 }),
-  build(TeamStat, { gameTeamId: 48, statCategoryId: 1, total: 36 }),
-  build(TeamStat, { gameTeamId: 49, statCategoryId: 1, total: 8 }),
-  build(TeamStat, { gameTeamId: 50, statCategoryId: 1, total: 23 }),
-  build(TeamStat, { gameTeamId: 51, statCategoryId: 1, total: 0 }),
-  build(TeamStat, { gameTeamId: 52, statCategoryId: 1, total: 0 }),
-  build(TeamStat, { gameTeamId: 53, statCategoryId: 1, total: 18 }),
-  build(TeamStat, { gameTeamId: 54, statCategoryId: 1, total: 64 }),
-  build(TeamStat, { gameTeamId: 55, statCategoryId: 1, total: 30 }),
-  build(TeamStat, { gameTeamId: 56, statCategoryId: 1, total: 48 }),
-  build(TeamStat, { gameTeamId: 57, statCategoryId: 1, total: 101 }),
-  build(TeamStat, { gameTeamId: 58, statCategoryId: 1, total: 89 }),
-  build(TeamStat, { gameTeamId: 59, statCategoryId: 1, total: 57 }),
-  build(TeamStat, { gameTeamId: 60, statCategoryId: 1, total: 65 }),
-  build(TeamStat, { gameTeamId: 61, statCategoryId: 1, total: 16 }),
-  build(TeamStat, { gameTeamId: 62, statCategoryId: 1, total: 33 }),
-  build(TeamStat, { gameTeamId: 63, statCategoryId: 1, total: 16 }),
-  build(TeamStat, { gameTeamId: 64, statCategoryId: 1, total: 15 }),
-  build(TeamStat, { gameTeamId: 65, statCategoryId: 1, total: 0 }),
-  build(TeamStat, { gameTeamId: 66, statCategoryId: 1, total: 0 }),
-  build(TeamStat, { gameTeamId: 67, statCategoryId: 1, total: 13 }),
-  build(TeamStat, { gameTeamId: 68, statCategoryId: 1, total: 55 }),
-  build(TeamStat, { gameTeamId: 69, statCategoryId: 1, total: 0 }),
-  build(TeamStat, { gameTeamId: 70, statCategoryId: 1, total: 0 }),
-  build(TeamStat, { gameTeamId: 71, statCategoryId: 1, total: 38 }),
-  build(TeamStat, { gameTeamId: 72, statCategoryId: 1, total: 67 })
-];
+         build(TeamStat, { gameTeamId: 1, statCategoryId: 1, total: 27 }),
+         build(TeamStat, { gameTeamId: 2, statCategoryId: 1, total: 12 }),
+         build(TeamStat, { gameTeamId: 3, statCategoryId: 1, total: 21 }),
+         build(TeamStat, { gameTeamId: 4, statCategoryId: 1, total: 18 }),
+         build(TeamStat, { gameTeamId: 5, statCategoryId: 1, total: 12 }),
+         build(TeamStat, { gameTeamId: 6, statCategoryId: 1, total: 58 }),
+         build(TeamStat, { gameTeamId: 7, statCategoryId: 1, total: 46 }),
+         build(TeamStat, { gameTeamId: 8, statCategoryId: 1, total: 10 }),
+         build(TeamStat, { gameTeamId: 9, statCategoryId: 1, total: 62 }),
+         build(TeamStat, { gameTeamId: 10, statCategoryId: 1, total: 57 }),
+         build(TeamStat, { gameTeamId: 11, statCategoryId: 1, total: 94 }),
+         build(TeamStat, { gameTeamId: 12, statCategoryId: 1, total: 62 }), // 14U - GBS
+         build(TeamStat, { gameTeamId: 13, statCategoryId: 1, total: 10 }),
+         build(TeamStat, { gameTeamId: 14, statCategoryId: 1, total: 30 }),
+         build(TeamStat, { gameTeamId: 15, statCategoryId: 1, total: 16 }),
+         build(TeamStat, { gameTeamId: 16, statCategoryId: 1, total: 21 }),
+         build(TeamStat, { gameTeamId: 17, statCategoryId: 1, total: 30 }),
+         build(TeamStat, { gameTeamId: 18, statCategoryId: 1, total: 56 }),
+         build(TeamStat, { gameTeamId: 19, statCategoryId: 1, total: 28 }),
+         build(TeamStat, { gameTeamId: 20, statCategoryId: 1, total: 40 }),
+         build(TeamStat, { gameTeamId: 21, statCategoryId: 1, total: 106 }),
+         build(TeamStat, { gameTeamId: 22, statCategoryId: 1, total: 76 }),
+         build(TeamStat, { gameTeamId: 23, statCategoryId: 1, total: 75 }), // 14U - GBS
+         build(TeamStat, { gameTeamId: 24, statCategoryId: 1, total: 38 }),
+         build(TeamStat, { gameTeamId: 25, statCategoryId: 1, total: 32 }),
+         build(TeamStat, { gameTeamId: 26, statCategoryId: 1, total: 26 }),
+         build(TeamStat, { gameTeamId: 27, statCategoryId: 1, total: 19 }),
+         build(TeamStat, { gameTeamId: 28, statCategoryId: 1, total: 21 }),
+         build(TeamStat, { gameTeamId: 29, statCategoryId: 1, total: 50 }),
+         build(TeamStat, { gameTeamId: 30, statCategoryId: 1, total: 26 }),
+         build(TeamStat, { gameTeamId: 31, statCategoryId: 1, total: 21 }),
+         build(TeamStat, { gameTeamId: 32, statCategoryId: 1, total: 53 }),
+         build(TeamStat, { gameTeamId: 33, statCategoryId: 1, total: 48 }), // 14U - GBS
+         build(TeamStat, { gameTeamId: 34, statCategoryId: 1, total: 56 }),
+         build(TeamStat, { gameTeamId: 35, statCategoryId: 1, total: 116 }),
+         build(TeamStat, { gameTeamId: 36, statCategoryId: 1, total: 44 }),
+         build(TeamStat, { gameTeamId: 37, statCategoryId: 1, total: 14 }),
+         build(TeamStat, { gameTeamId: 38, statCategoryId: 1, total: 20 }),
+         build(TeamStat, { gameTeamId: 39, statCategoryId: 1, total: 23 }),
+         build(TeamStat, { gameTeamId: 40, statCategoryId: 1, total: 32 }),
+         build(TeamStat, { gameTeamId: 41, statCategoryId: 1, total: 47 }),
+         build(TeamStat, { gameTeamId: 42, statCategoryId: 1, total: 36 }),
+         build(TeamStat, { gameTeamId: 43, statCategoryId: 1, total: 44 }),
+         build(TeamStat, { gameTeamId: 44, statCategoryId: 1, total: 52 }),
+         build(TeamStat, { gameTeamId: 45, statCategoryId: 1, total: 61 }),
+         build(TeamStat, { gameTeamId: 46, statCategoryId: 1, total: 68 }), // 14U - GBS
+         build(TeamStat, { gameTeamId: 47, statCategoryId: 1, total: 57 }),
+         build(TeamStat, { gameTeamId: 48, statCategoryId: 1, total: 36 }),
+         build(TeamStat, { gameTeamId: 49, statCategoryId: 1, total: 8 }),
+         build(TeamStat, { gameTeamId: 50, statCategoryId: 1, total: 23 }),
+         build(TeamStat, { gameTeamId: 51, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 52, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 53, statCategoryId: 1, total: 18 }),
+         build(TeamStat, { gameTeamId: 54, statCategoryId: 1, total: 64 }),
+         build(TeamStat, { gameTeamId: 55, statCategoryId: 1, total: 30 }),
+         build(TeamStat, { gameTeamId: 56, statCategoryId: 1, total: 48 }),
+         build(TeamStat, { gameTeamId: 57, statCategoryId: 1, total: 101 }),
+         build(TeamStat, { gameTeamId: 58, statCategoryId: 1, total: 89 }),
+         build(TeamStat, { gameTeamId: 59, statCategoryId: 1, total: 57 }),
+         build(TeamStat, { gameTeamId: 60, statCategoryId: 1, total: 65 }),
+         build(TeamStat, { gameTeamId: 61, statCategoryId: 1, total: 16 }),
+         build(TeamStat, { gameTeamId: 62, statCategoryId: 1, total: 33 }),
+         build(TeamStat, { gameTeamId: 63, statCategoryId: 1, total: 16 }),
+         build(TeamStat, { gameTeamId: 64, statCategoryId: 1, total: 15 }),
+         build(TeamStat, { gameTeamId: 65, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 66, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 67, statCategoryId: 1, total: 13 }),
+         build(TeamStat, { gameTeamId: 68, statCategoryId: 1, total: 55 }),
+         build(TeamStat, { gameTeamId: 69, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 70, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 71, statCategoryId: 1, total: 38 }),
+         build(TeamStat, { gameTeamId: 72, statCategoryId: 1, total: 67 }),
+         build(TeamStat, { gameTeamId: 73, statCategoryId: 1, total: 22 }),
+         build(TeamStat, { gameTeamId: 74, statCategoryId: 1, total: 24 }),
+         build(TeamStat, { gameTeamId: 75, statCategoryId: 1, total: 14 }),
+         build(TeamStat, { gameTeamId: 76, statCategoryId: 1, total: 23 }),
+         build(TeamStat, { gameTeamId: 77, statCategoryId: 1, total: 51 }),
+         build(TeamStat, { gameTeamId: 78, statCategoryId: 1, total: 33 }),
+         build(TeamStat, { gameTeamId: 79, statCategoryId: 1, total: 38 }),
+         build(TeamStat, { gameTeamId: 80, statCategoryId: 1, total: 42 }),
+         build(TeamStat, { gameTeamId: 81, statCategoryId: 1, total: 0 }), // 93
+         build(TeamStat, { gameTeamId: 82, statCategoryId: 1, total: 0 }), // 62
+         build(TeamStat, { gameTeamId: 83, statCategoryId: 1, total: 0 }), // 89
+         build(TeamStat, { gameTeamId: 84, statCategoryId: 1, total: 0 }), // 47
+         build(TeamStat, { gameTeamId: 85, statCategoryId: 1, total: 40 }),
+         build(TeamStat, { gameTeamId: 86, statCategoryId: 1, total: 46 }),
+         build(TeamStat, { gameTeamId: 87, statCategoryId: 1, total: 18 }),
+         build(TeamStat, { gameTeamId: 88, statCategoryId: 1, total: 72 }),
+         build(TeamStat, { gameTeamId: 89, statCategoryId: 1, total: 23 }),
+         build(TeamStat, { gameTeamId: 90, statCategoryId: 1, total: 8 }),
+         build(TeamStat, { gameTeamId: 91, statCategoryId: 1, total: 35 }),
+         build(TeamStat, { gameTeamId: 92, statCategoryId: 1, total: 20 }),
+         build(TeamStat, { gameTeamId: 93, statCategoryId: 1, total: 30 }),
+         build(TeamStat, { gameTeamId: 94, statCategoryId: 1, total: 64 }),
+         build(TeamStat, { gameTeamId: 95, statCategoryId: 1, total: 39 }),
+         build(TeamStat, { gameTeamId: 96, statCategoryId: 1, total: 31 }),
+         build(TeamStat, { gameTeamId: 97, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 98, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 99, statCategoryId: 1, total: 85 }),
+         build(TeamStat, { gameTeamId: 100, statCategoryId: 1, total: 63 }),
+         build(TeamStat, { gameTeamId: 101, statCategoryId: 1, total: 37 }),
+         build(TeamStat, { gameTeamId: 102, statCategoryId: 1, total: 77 }),
+         build(TeamStat, { gameTeamId: 103, statCategoryId: 1, total: 79 }),
+         build(TeamStat, { gameTeamId: 104, statCategoryId: 1, total: 71 }),
+         build(TeamStat, { gameTeamId: 105, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 106, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 107, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 108, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 109, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 110, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 111, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 112, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 113, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 114, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 115, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 116, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 117, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 118, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 119, statCategoryId: 1, total: 0 }),
+         build(TeamStat, { gameTeamId: 120, statCategoryId: 1, total: 0 })
+       ];
 
 export const PLAYERS = [
   build(Player, { id: 0, firstName: '', lastName: '' }),
   build(Player, { id: 1, firstName: 'Damauri', lastName: 'Thomas' }),
   build(Player, { id: 2, firstName: 'Drake', lastName: 'Kelley' }),
   build(Player, { id: 3, firstName: 'Javoni', lastName: 'Porter' }),
-  build(Player, { id: 4, firstName: 'Isaiah', lastName: 'Ream' }),
+  build(Player, { id: 4, firstName: 'Isaiah', lastName: 'Robinson' }),
   build(Player, { id: 5, firstName: 'Kaleb', lastName: 'Mjuholland' }),
   build(Player, { id: 6, firstName: 'Jadon', lastName: 'Kipp' }),
   build(Player, { id: 7, firstName: 'Damion', lastName: 'Roth', nickname: 'Jace' }),
