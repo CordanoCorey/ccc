@@ -800,7 +800,7 @@ export const PLAYERS = [
   build(Player, { id: 16, firstName: 'Jayde', lastName: 'Wilson' }),
   build(Player, { id: 17, firstName: 'Chester', lastName: 'Wilson', nickname: 'CJ' }),
   build(Player, { id: 18, firstName: 'Shaun', lastName: 'Smith' }),
-  build(Player, { id: 19, firstName: 'Asmina', lastName: 'Palmer' }),
+  build(Player, { id: 19, firstName: 'Azmina', lastName: 'Palmer' }),
   build(Player, { id: 20, firstName: 'Trevon', lastName: 'Harris', nickname: 'Trey' }),
   build(Player, { id: 21, firstName: 'Xzavier', lastName: 'Tatum' }),
   build(Player, { id: 22, firstName: 'Eisley', lastName: 'Seretti' }),
@@ -941,7 +941,7 @@ export const PLAYERS = [
   build(Player, { id: 157, firstName: 'Joaquin', lastName: 'Ortiz' }), // PBH
   build(Player, { id: 158, firstName: 'Landon', lastName: 'Lackemeyer' }), // C-Luv
   build(Player, { id: 159, firstName: 'Anthony', lastName: 'Smith' }), // C-Luv
-  build(Player, { id: 160, firstName: 'Adrian', lastName: 'Bennett', nickname: 'Khi' }), // CVR
+  build(Player, { id: 160, firstName: 'Adrian', lastName: 'Bennett', nickname: 'Khi', isActive: false }), // CVR
   build(Player, { id: 161, firstName: 'Brian', lastName: 'Szeles' }), // CVR
   build(Player, { id: 162, firstName: 'Nadia', lastName: 'Hunter' }), // 12U - CVR
   build(Player, { id: 163, firstName: 'Jace', lastName: 'Jones', isActive: false }),
@@ -4960,6 +4960,12 @@ export const GAME_PLAYERS = [
     gameTeamId: 120,
     playerId: 19,
     jerseyNumber: '11'
+  }),
+  build(GamePlayer, {
+    id: 711,
+    gameTeamId: 87,
+    playerId: 90,
+    jerseyNumber: '4'
   })
 ];
 
@@ -8484,11 +8490,11 @@ export const STATS = [
   build(Stat, { gamePlayerId: 704, statCategoryId: 3, total: 0 }),
   build(Stat, { gamePlayerId: 704, statCategoryId: 4, total: 0 }),
   build(Stat, { gamePlayerId: 704, statCategoryId: 5, total: 2 }),
-  build(Stat, { gamePlayerId: 705, statCategoryId: 1, total: 4 }),
-  build(Stat, { gamePlayerId: 705, statCategoryId: 2, total: 7 }),
+  build(Stat, { gamePlayerId: 705, statCategoryId: 1, total: 0 }),
+  build(Stat, { gamePlayerId: 705, statCategoryId: 2, total: 4 }),
   build(Stat, { gamePlayerId: 705, statCategoryId: 3, total: 0 }),
   build(Stat, { gamePlayerId: 705, statCategoryId: 4, total: 0 }),
-  build(Stat, { gamePlayerId: 705, statCategoryId: 5, total: 3 }),
+  build(Stat, { gamePlayerId: 705, statCategoryId: 5, total: 0 }),
   build(Stat, { gamePlayerId: 706, statCategoryId: 1, total: 2 }),
   build(Stat, { gamePlayerId: 706, statCategoryId: 2, total: 1 }),
   build(Stat, { gamePlayerId: 706, statCategoryId: 3, total: 1 }),
@@ -8509,11 +8515,16 @@ export const STATS = [
   build(Stat, { gamePlayerId: 709, statCategoryId: 3, total: 0 }),
   build(Stat, { gamePlayerId: 709, statCategoryId: 4, total: 0 }),
   build(Stat, { gamePlayerId: 709, statCategoryId: 5, total: 0 }),
-  build(Stat, { gamePlayerId: 710, statCategoryId: 1, total: 0 }),
-  build(Stat, { gamePlayerId: 710, statCategoryId: 2, total: 4 }),
+  build(Stat, { gamePlayerId: 710, statCategoryId: 1, total: 4 }),
+  build(Stat, { gamePlayerId: 710, statCategoryId: 2, total: 7 }),
   build(Stat, { gamePlayerId: 710, statCategoryId: 3, total: 0 }),
   build(Stat, { gamePlayerId: 710, statCategoryId: 4, total: 0 }),
-  build(Stat, { gamePlayerId: 710, statCategoryId: 5, total: 0 })
+  build(Stat, { gamePlayerId: 710, statCategoryId: 5, total: 3 }),
+  build(Stat, { gamePlayerId: 711, statCategoryId: 1, total: 2 }),
+  build(Stat, { gamePlayerId: 711, statCategoryId: 2, total: 0 }),
+  build(Stat, { gamePlayerId: 711, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 711, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 711, statCategoryId: 5, total: 0 })
 ];
 
 export const INITIAL_STATE = {
