@@ -2,6 +2,7 @@
   <div class="game-time">
     {{ game.startTime | date: 'shortDate' }} @
     {{ game.startTime | date: 'shortTime' }}
+    <!-- Game ID: {{ game.id }} -->
   </div>
   <div class="game-location">{{ game.locationName }}</div>
   <div class="score" *ngFor="let team of game.gameTeams">
