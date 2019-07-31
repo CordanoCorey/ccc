@@ -531,6 +531,30 @@ export const GAMES = [
            startTime: new Date(2019, 6, 25, 20, 30),
            leagueId: 1,
            locationId: 3
+         }),
+         build(Game, {
+           id: 61,
+           startTime: new Date(2019, 6, 30, 18, 0),
+           leagueId: 1,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 62,
+           startTime: new Date(2019, 6, 30, 18, 0),
+           leagueId: 1,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 63,
+           startTime: new Date(2019, 6, 30, 19, 0),
+           leagueId: 3,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 64,
+           startTime: new Date(2019, 6, 30, 19, 0),
+           leagueId: 3,
+           locationId: 3
          })
        ];
 
@@ -654,7 +678,15 @@ export const GAME_TEAMS = [
          build(GameTeam, { id: 117, gameId: 59, teamId: 3 }),
          build(GameTeam, { id: 118, gameId: 59, teamId: 6 }),
          build(GameTeam, { id: 119, gameId: 60, teamId: 1 }),
-         build(GameTeam, { id: 120, gameId: 60, teamId: 2 })
+         build(GameTeam, { id: 120, gameId: 60, teamId: 2 }),
+         build(GameTeam, { id: 121, gameId: 61, teamId: 5 }),
+         build(GameTeam, { id: 122, gameId: 61, teamId: 6 }),
+         build(GameTeam, { id: 123, gameId: 62, teamId: 1 }),
+         build(GameTeam, { id: 124, gameId: 62, teamId: 4 }),
+         build(GameTeam, { id: 125, gameId: 63, teamId: 14 }),
+         build(GameTeam, { id: 126, gameId: 63, teamId: 12 }),
+         build(GameTeam, { id: 127, gameId: 64, teamId: 16 }),
+         build(GameTeam, { id: 128, gameId: 64, teamId: 13 })
        ];
 
 export const TEAM_STATS = [
@@ -777,7 +809,15 @@ export const TEAM_STATS = [
          build(TeamStat, { gameTeamId: 117, statCategoryId: 1, total: 8 }),
          build(TeamStat, { gameTeamId: 118, statCategoryId: 1, total: 31 }),
          build(TeamStat, { gameTeamId: 119, statCategoryId: 1, total: 20 }),
-         build(TeamStat, { gameTeamId: 120, statCategoryId: 1, total: 9 })
+         build(TeamStat, { gameTeamId: 120, statCategoryId: 1, total: 9 }),
+         build(TeamStat, { gameTeamId: 121, statCategoryId: 1, total: 29 }),
+         build(TeamStat, { gameTeamId: 122, statCategoryId: 1, total: 26 }),
+         build(TeamStat, { gameTeamId: 123, statCategoryId: 1, total: 27 }),
+         build(TeamStat, { gameTeamId: 124, statCategoryId: 1, total: 23 }),
+         build(TeamStat, { gameTeamId: 125, statCategoryId: 1, total: 92 }),
+         build(TeamStat, { gameTeamId: 126, statCategoryId: 1, total: 65 }),
+         build(TeamStat, { gameTeamId: 127, statCategoryId: 1, total: 102 }),
+         build(TeamStat, { gameTeamId: 128, statCategoryId: 1, total: 93 })
        ];
 
 export const PLAYERS = [
@@ -4966,6 +5006,330 @@ export const GAME_PLAYERS = [
     gameTeamId: 87,
     playerId: 90,
     jerseyNumber: '4'
+  }),
+  build(GamePlayer, {
+    id: 712,
+    gameTeamId: 121,
+    playerId: 46,
+    jerseyNumber: '0'
+  }),
+  build(GamePlayer, {
+    id: 713,
+    gameTeamId: 121,
+    playerId: 166,
+    jerseyNumber: '2'
+  }),
+  build(GamePlayer, {
+    id: 714,
+    gameTeamId: 121,
+    playerId: 167,
+    jerseyNumber: '3'
+  }),
+  build(GamePlayer, {
+    id: 715,
+    gameTeamId: 121,
+    playerId: 40,
+    jerseyNumber: '5'
+  }),
+  build(GamePlayer, {
+    id: 716,
+    gameTeamId: 121,
+    playerId: 165,
+    jerseyNumber: '6'
+  }),
+  build(GamePlayer, {
+    id: 717,
+    gameTeamId: 121,
+    playerId: 168,
+    jerseyNumber: '7'
+  }),
+  build(GamePlayer, {
+    id: 718,
+    gameTeamId: 122,
+    playerId: 48,
+    jerseyNumber: '0'
+  }),
+  build(GamePlayer, {
+    id: 719,
+    gameTeamId: 122,
+    playerId: 49,
+    jerseyNumber: '2'
+  }),
+  build(GamePlayer, {
+    id: 720,
+    gameTeamId: 122,
+    playerId: 47,
+    jerseyNumber: '6'
+  }),
+  build(GamePlayer, {
+    id: 721,
+    gameTeamId: 122,
+    playerId: 52,
+    jerseyNumber: '7'
+  }),
+  build(GamePlayer, {
+    id: 722,
+    gameTeamId: 122,
+    playerId: 151,
+    jerseyNumber: '8'
+  }),
+  build(GamePlayer, {
+    id: 723,
+    gameTeamId: 123,
+    playerId: 7,
+    jerseyNumber: '0'
+  }),
+  build(GamePlayer, {
+    id: 724,
+    gameTeamId: 123,
+    playerId: 1,
+    jerseyNumber: '2'
+  }),
+  build(GamePlayer, {
+    id: 725,
+    gameTeamId: 123,
+    playerId: 3,
+    jerseyNumber: '3'
+  }),
+  build(GamePlayer, {
+    id: 726,
+    gameTeamId: 123,
+    playerId: 2,
+    jerseyNumber: '4'
+  }),
+  build(GamePlayer, {
+    id: 727,
+    gameTeamId: 123,
+    playerId: 5,
+    jerseyNumber: '5'
+  }),
+  build(GamePlayer, {
+    id: 728,
+    gameTeamId: 123,
+    playerId: 8,
+    jerseyNumber: '6'
+  }),
+  build(GamePlayer, {
+    id: 729,
+    gameTeamId: 123,
+    playerId: 164,
+    jerseyNumber: '7'
+  }),
+  build(GamePlayer, {
+    id: 730,
+    gameTeamId: 123,
+    playerId: 10,
+    jerseyNumber: '9'
+  }),
+  build(GamePlayer, {
+    id: 731,
+    gameTeamId: 124,
+    playerId: 31,
+    jerseyNumber: '00'
+  }),
+  build(GamePlayer, {
+    id: 732,
+    gameTeamId: 124,
+    playerId: 32,
+    jerseyNumber: '0'
+  }),
+  build(GamePlayer, {
+    id: 733,
+    gameTeamId: 124,
+    playerId: 37,
+    jerseyNumber: '1'
+  }),
+  build(GamePlayer, {
+    id: 734,
+    gameTeamId: 124,
+    playerId: 29,
+    jerseyNumber: '7'
+  }),
+  build(GamePlayer, {
+    id: 735,
+    gameTeamId: 124,
+    playerId: 30,
+    jerseyNumber: '8'
+  }),
+  build(GamePlayer, {
+    id: 736,
+    gameTeamId: 124,
+    playerId: 33,
+    jerseyNumber: '9'
+  }),
+  build(GamePlayer, {
+    id: 737,
+    gameTeamId: 124,
+    playerId: 36,
+    jerseyNumber: '10'
+  }),
+  build(GamePlayer, {
+    id: 738,
+    gameTeamId: 125,
+    playerId: 147,
+    jerseyNumber: '1'
+  }),
+  build(GamePlayer, {
+    id: 739,
+    gameTeamId: 125,
+    playerId: 140,
+    jerseyNumber: '3'
+  }),
+  build(GamePlayer, {
+    id: 740,
+    gameTeamId: 125,
+    playerId: 146,
+    jerseyNumber: '4'
+  }),
+  build(GamePlayer, {
+    id: 741,
+    gameTeamId: 125,
+    playerId: 139,
+    jerseyNumber: '5'
+  }),
+  build(GamePlayer, {
+    id: 742,
+    gameTeamId: 125,
+    playerId: 142,
+    jerseyNumber: '7'
+  }),
+  build(GamePlayer, {
+    id: 743,
+    gameTeamId: 125,
+    playerId: 141,
+    jerseyNumber: '8'
+  }),
+  build(GamePlayer, {
+    id: 744,
+    gameTeamId: 125,
+    playerId: 170,
+    jerseyNumber: '14'
+  }),
+  build(GamePlayer, {
+    id: 745,
+    gameTeamId: 125,
+    playerId: 135,
+    jerseyNumber: '15'
+  }),
+  build(GamePlayer, {
+    id: 746,
+    gameTeamId: 126,
+    playerId: 121,
+    jerseyNumber: '0'
+  }),
+  build(GamePlayer, {
+    id: 747,
+    gameTeamId: 126,
+    playerId: 127,
+    jerseyNumber: '1'
+  }),
+  build(GamePlayer, {
+    id: 748,
+    gameTeamId: 126,
+    playerId: 125,
+    jerseyNumber: '2'
+  }),
+  build(GamePlayer, {
+    id: 749,
+    gameTeamId: 126,
+    playerId: 158,
+    jerseyNumber: '3'
+  }),
+  build(GamePlayer, {
+    id: 750,
+    gameTeamId: 126,
+    playerId: 161,
+    jerseyNumber: '16'
+  }),
+  build(GamePlayer, {
+    id: 751,
+    gameTeamId: 126,
+    playerId: 136,
+    jerseyNumber: '18'
+  }),
+  build(GamePlayer, {
+    id: 752,
+    gameTeamId: 127,
+    playerId: 157,
+    jerseyNumber: '1'
+  }),
+  build(GamePlayer, {
+    id: 753,
+    gameTeamId: 127,
+    playerId: 113,
+    jerseyNumber: '3'
+  }),
+  build(GamePlayer, {
+    id: 754,
+    gameTeamId: 127,
+    playerId: 120,
+    jerseyNumber: '5'
+  }),
+  build(GamePlayer, {
+    id: 755,
+    gameTeamId: 127,
+    playerId: 112,
+    jerseyNumber: '8'
+  }),
+  build(GamePlayer, {
+    id: 756,
+    gameTeamId: 127,
+    playerId: 114,
+    jerseyNumber: '9'
+  }),
+  build(GamePlayer, {
+    id: 757,
+    gameTeamId: 127,
+    playerId: 130,
+    jerseyNumber: '14'
+  }),
+  build(GamePlayer, {
+    id: 758,
+    gameTeamId: 128,
+    playerId: 109,
+    jerseyNumber: '1'
+  }),
+  build(GamePlayer, {
+    id: 759,
+    gameTeamId: 128,
+    playerId: 104,
+    jerseyNumber: '5'
+  }),
+  build(GamePlayer, {
+    id: 760,
+    gameTeamId: 128,
+    playerId: 80,
+    jerseyNumber: '6'
+  }),
+  build(GamePlayer, {
+    id: 761,
+    gameTeamId: 128,
+    playerId: 171,
+    jerseyNumber: '7'
+  }),
+  build(GamePlayer, {
+    id: 762,
+    gameTeamId: 128,
+    playerId: 106,
+    jerseyNumber: '8'
+  }),
+  build(GamePlayer, {
+    id: 763,
+    gameTeamId: 128,
+    playerId: 105,
+    jerseyNumber: '11'
+  }),
+  build(GamePlayer, {
+    id: 764,
+    gameTeamId: 128,
+    playerId: 131,
+    jerseyNumber: '14'
+  }),
+  build(GamePlayer, {
+    id: 765,
+    gameTeamId: 127,
+    playerId: 117,
+    jerseyNumber: '2'
   })
 ];
 
@@ -8524,7 +8888,277 @@ export const STATS = [
   build(Stat, { gamePlayerId: 711, statCategoryId: 2, total: 0 }),
   build(Stat, { gamePlayerId: 711, statCategoryId: 3, total: 0 }),
   build(Stat, { gamePlayerId: 711, statCategoryId: 4, total: 0 }),
-  build(Stat, { gamePlayerId: 711, statCategoryId: 5, total: 0 })
+  build(Stat, { gamePlayerId: 711, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 712, statCategoryId: 1, total: 14 }),
+  build(Stat, { gamePlayerId: 712, statCategoryId: 2, total: 6 }),
+  build(Stat, { gamePlayerId: 712, statCategoryId: 3, total: 2 }),
+  build(Stat, { gamePlayerId: 712, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 712, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 713, statCategoryId: 1, total: 2 }),
+  build(Stat, { gamePlayerId: 713, statCategoryId: 2, total: 2 }),
+  build(Stat, { gamePlayerId: 713, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 713, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 713, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 714, statCategoryId: 1, total: 2 }),
+  build(Stat, { gamePlayerId: 714, statCategoryId: 2, total: 2 }),
+  build(Stat, { gamePlayerId: 714, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 714, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 714, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 715, statCategoryId: 1, total: 11 }),
+  build(Stat, { gamePlayerId: 715, statCategoryId: 2, total: 4 }),
+  build(Stat, { gamePlayerId: 715, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 715, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 715, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 716, statCategoryId: 1, total: 0 }),
+  build(Stat, { gamePlayerId: 716, statCategoryId: 2, total: 0 }),
+  build(Stat, { gamePlayerId: 716, statCategoryId: 3, total: 1 }),
+  build(Stat, { gamePlayerId: 716, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 716, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 717, statCategoryId: 1, total: 0 }),
+  build(Stat, { gamePlayerId: 717, statCategoryId: 2, total: 1 }),
+  build(Stat, { gamePlayerId: 717, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 717, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 717, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 718, statCategoryId: 1, total: 0 }),
+  build(Stat, { gamePlayerId: 718, statCategoryId: 2, total: 1 }),
+  build(Stat, { gamePlayerId: 718, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 718, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 718, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 719, statCategoryId: 1, total: 17 }),
+  build(Stat, { gamePlayerId: 719, statCategoryId: 2, total: 10 }),
+  build(Stat, { gamePlayerId: 719, statCategoryId: 3, total: 1 }),
+  build(Stat, { gamePlayerId: 719, statCategoryId: 4, total: 3 }),
+  build(Stat, { gamePlayerId: 719, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 720, statCategoryId: 1, total: 6 }),
+  build(Stat, { gamePlayerId: 720, statCategoryId: 2, total: 12 }),
+  build(Stat, { gamePlayerId: 720, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 720, statCategoryId: 4, total: 1 }),
+  build(Stat, { gamePlayerId: 720, statCategoryId: 5, total: 3 }),
+  build(Stat, { gamePlayerId: 721, statCategoryId: 1, total: 3 }),
+  build(Stat, { gamePlayerId: 721, statCategoryId: 2, total: 4 }),
+  build(Stat, { gamePlayerId: 721, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 721, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 721, statCategoryId: 5, total: 2 }),
+  build(Stat, { gamePlayerId: 722, statCategoryId: 1, total: 0 }),
+  build(Stat, { gamePlayerId: 722, statCategoryId: 2, total: 0 }),
+  build(Stat, { gamePlayerId: 722, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 722, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 722, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 723, statCategoryId: 1, total: 0 }),
+  build(Stat, { gamePlayerId: 723, statCategoryId: 2, total: 2 }),
+  build(Stat, { gamePlayerId: 723, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 723, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 723, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 724, statCategoryId: 1, total: 1 }),
+  build(Stat, { gamePlayerId: 724, statCategoryId: 2, total: 1 }),
+  build(Stat, { gamePlayerId: 724, statCategoryId: 3, total: 1 }),
+  build(Stat, { gamePlayerId: 724, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 724, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 725, statCategoryId: 1, total: 9 }),
+  build(Stat, { gamePlayerId: 725, statCategoryId: 2, total: 7 }),
+  build(Stat, { gamePlayerId: 725, statCategoryId: 3, total: 2 }),
+  build(Stat, { gamePlayerId: 725, statCategoryId: 4, total: 1 }),
+  build(Stat, { gamePlayerId: 725, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 726, statCategoryId: 1, total: 10 }),
+  build(Stat, { gamePlayerId: 726, statCategoryId: 2, total: 3 }),
+  build(Stat, { gamePlayerId: 726, statCategoryId: 3, total: 1 }),
+  build(Stat, { gamePlayerId: 726, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 726, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 727, statCategoryId: 1, total: 3 }),
+  build(Stat, { gamePlayerId: 727, statCategoryId: 2, total: 9 }),
+  build(Stat, { gamePlayerId: 727, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 727, statCategoryId: 4, total: 1 }),
+  build(Stat, { gamePlayerId: 727, statCategoryId: 5, total: 4 }),
+  build(Stat, { gamePlayerId: 728, statCategoryId: 1, total: 0 }),
+  build(Stat, { gamePlayerId: 728, statCategoryId: 2, total: 4 }),
+  build(Stat, { gamePlayerId: 728, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 728, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 728, statCategoryId: 5, total: 2 }),
+  build(Stat, { gamePlayerId: 729, statCategoryId: 1, total: 4 }),
+  build(Stat, { gamePlayerId: 729, statCategoryId: 2, total: 0 }),
+  build(Stat, { gamePlayerId: 729, statCategoryId: 3, total: 5 }),
+  build(Stat, { gamePlayerId: 729, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 729, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 730, statCategoryId: 1, total: 0 }),
+  build(Stat, { gamePlayerId: 730, statCategoryId: 2, total: 1 }),
+  build(Stat, { gamePlayerId: 730, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 730, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 730, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 731, statCategoryId: 1, total: 4 }),
+  build(Stat, { gamePlayerId: 731, statCategoryId: 2, total: 3 }),
+  build(Stat, { gamePlayerId: 731, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 731, statCategoryId: 4, total: 1 }),
+  build(Stat, { gamePlayerId: 731, statCategoryId: 5, total: 3 }),
+  build(Stat, { gamePlayerId: 732, statCategoryId: 1, total: 1 }),
+  build(Stat, { gamePlayerId: 732, statCategoryId: 2, total: 2 }),
+  build(Stat, { gamePlayerId: 732, statCategoryId: 3, total: 1 }),
+  build(Stat, { gamePlayerId: 732, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 732, statCategoryId: 5, total: 2 }),
+  build(Stat, { gamePlayerId: 733, statCategoryId: 1, total: 2 }),
+  build(Stat, { gamePlayerId: 733, statCategoryId: 2, total: 2 }),
+  build(Stat, { gamePlayerId: 733, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 733, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 733, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 734, statCategoryId: 1, total: 3 }),
+  build(Stat, { gamePlayerId: 734, statCategoryId: 2, total: 2 }),
+  build(Stat, { gamePlayerId: 734, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 734, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 734, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 735, statCategoryId: 1, total: 9 }),
+  build(Stat, { gamePlayerId: 735, statCategoryId: 2, total: 4 }),
+  build(Stat, { gamePlayerId: 735, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 735, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 735, statCategoryId: 5, total: 7 }),
+  build(Stat, { gamePlayerId: 736, statCategoryId: 1, total: 2 }),
+  build(Stat, { gamePlayerId: 736, statCategoryId: 2, total: 3 }),
+  build(Stat, { gamePlayerId: 736, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 736, statCategoryId: 4, total: 1 }),
+  build(Stat, { gamePlayerId: 736, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 737, statCategoryId: 1, total: 2 }),
+  build(Stat, { gamePlayerId: 737, statCategoryId: 2, total: 7 }),
+  build(Stat, { gamePlayerId: 737, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 737, statCategoryId: 4, total: 1 }),
+  build(Stat, { gamePlayerId: 737, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 738, statCategoryId: 1, total: 10 }),
+  build(Stat, { gamePlayerId: 738, statCategoryId: 2, total: 4 }),
+  build(Stat, { gamePlayerId: 738, statCategoryId: 3, total: 1 }),
+  build(Stat, { gamePlayerId: 738, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 738, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 739, statCategoryId: 1, total: 12 }),
+  build(Stat, { gamePlayerId: 739, statCategoryId: 2, total: 6 }),
+  build(Stat, { gamePlayerId: 739, statCategoryId: 3, total: 3 }),
+  build(Stat, { gamePlayerId: 739, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 739, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 740, statCategoryId: 1, total: 0 }),
+  build(Stat, { gamePlayerId: 740, statCategoryId: 2, total: 1 }),
+  build(Stat, { gamePlayerId: 740, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 740, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 740, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 741, statCategoryId: 1, total: 37 }),
+  build(Stat, { gamePlayerId: 741, statCategoryId: 2, total: 11 }),
+  build(Stat, { gamePlayerId: 741, statCategoryId: 3, total: 6 }),
+  build(Stat, { gamePlayerId: 741, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 741, statCategoryId: 5, total: 4 }),
+  build(Stat, { gamePlayerId: 742, statCategoryId: 1, total: 3 }),
+  build(Stat, { gamePlayerId: 742, statCategoryId: 2, total: 5 }),
+  build(Stat, { gamePlayerId: 742, statCategoryId: 3, total: 1 }),
+  build(Stat, { gamePlayerId: 742, statCategoryId: 4, total: 1 }),
+  build(Stat, { gamePlayerId: 742, statCategoryId: 5, total: 3 }),
+  build(Stat, { gamePlayerId: 743, statCategoryId: 1, total: 30 }),
+  build(Stat, { gamePlayerId: 743, statCategoryId: 2, total: 6 }),
+  build(Stat, { gamePlayerId: 743, statCategoryId: 3, total: 5 }),
+  build(Stat, { gamePlayerId: 743, statCategoryId: 4, total: 2 }),
+  build(Stat, { gamePlayerId: 743, statCategoryId: 5, total: 5 }),
+  build(Stat, { gamePlayerId: 744, statCategoryId: 1, total: 0 }),
+  build(Stat, { gamePlayerId: 744, statCategoryId: 2, total: 0 }),
+  build(Stat, { gamePlayerId: 744, statCategoryId: 3, total: 2 }),
+  build(Stat, { gamePlayerId: 744, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 744, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 745, statCategoryId: 1, total: 2 }),
+  build(Stat, { gamePlayerId: 745, statCategoryId: 2, total: 1 }),
+  build(Stat, { gamePlayerId: 745, statCategoryId: 3, total: 1 }),
+  build(Stat, { gamePlayerId: 745, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 745, statCategoryId: 5, total: 3 }),
+  build(Stat, { gamePlayerId: 746, statCategoryId: 1, total: 2 }),
+  build(Stat, { gamePlayerId: 746, statCategoryId: 2, total: 2 }),
+  build(Stat, { gamePlayerId: 746, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 746, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 746, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 747, statCategoryId: 1, total: 5 }),
+  build(Stat, { gamePlayerId: 747, statCategoryId: 2, total: 2 }),
+  build(Stat, { gamePlayerId: 747, statCategoryId: 3, total: 1 }),
+  build(Stat, { gamePlayerId: 747, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 747, statCategoryId: 5, total: 3 }),
+  build(Stat, { gamePlayerId: 748, statCategoryId: 1, total: 27 }),
+  build(Stat, { gamePlayerId: 748, statCategoryId: 2, total: 1 }),
+  build(Stat, { gamePlayerId: 748, statCategoryId: 3, total: 1 }),
+  build(Stat, { gamePlayerId: 748, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 748, statCategoryId: 5, total: 4 }),
+  build(Stat, { gamePlayerId: 749, statCategoryId: 1, total: 11 }),
+  build(Stat, { gamePlayerId: 749, statCategoryId: 2, total: 4 }),
+  build(Stat, { gamePlayerId: 749, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 749, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 749, statCategoryId: 5, total: 2 }),
+  build(Stat, { gamePlayerId: 750, statCategoryId: 1, total: 12 }),
+  build(Stat, { gamePlayerId: 750, statCategoryId: 2, total: 7 }),
+  build(Stat, { gamePlayerId: 750, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 750, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 750, statCategoryId: 5, total: 2 }),
+  build(Stat, { gamePlayerId: 751, statCategoryId: 1, total: 8 }),
+  build(Stat, { gamePlayerId: 751, statCategoryId: 2, total: 7 }),
+  build(Stat, { gamePlayerId: 751, statCategoryId: 3, total: 1 }),
+  build(Stat, { gamePlayerId: 751, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 751, statCategoryId: 5, total: 2 }),
+  build(Stat, { gamePlayerId: 752, statCategoryId: 1, total: 42 }),
+  build(Stat, { gamePlayerId: 752, statCategoryId: 2, total: 7 }),
+  build(Stat, { gamePlayerId: 752, statCategoryId: 3, total: 5 }),
+  build(Stat, { gamePlayerId: 752, statCategoryId: 4, total: 1 }),
+  build(Stat, { gamePlayerId: 752, statCategoryId: 5, total: 3 }),
+  build(Stat, { gamePlayerId: 753, statCategoryId: 1, total: 33 }),
+  build(Stat, { gamePlayerId: 753, statCategoryId: 2, total: 6 }),
+  build(Stat, { gamePlayerId: 753, statCategoryId: 3, total: 2 }),
+  build(Stat, { gamePlayerId: 753, statCategoryId: 4, total: 3 }),
+  build(Stat, { gamePlayerId: 753, statCategoryId: 5, total: 2 }),
+  build(Stat, { gamePlayerId: 754, statCategoryId: 1, total: 26 }),
+  build(Stat, { gamePlayerId: 754, statCategoryId: 2, total: 18 }),
+  build(Stat, { gamePlayerId: 754, statCategoryId: 3, total: 5 }),
+  build(Stat, { gamePlayerId: 754, statCategoryId: 4, total: 1 }),
+  build(Stat, { gamePlayerId: 754, statCategoryId: 5, total: 4 }),
+  build(Stat, { gamePlayerId: 755, statCategoryId: 1, total: 0 }),
+  build(Stat, { gamePlayerId: 755, statCategoryId: 2, total: 3 }),
+  build(Stat, { gamePlayerId: 755, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 755, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 755, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 756, statCategoryId: 1, total: 1 }),
+  build(Stat, { gamePlayerId: 756, statCategoryId: 2, total: 1 }),
+  build(Stat, { gamePlayerId: 756, statCategoryId: 3, total: 1 }),
+  build(Stat, { gamePlayerId: 756, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 756, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 757, statCategoryId: 1, total: 0 }),
+  build(Stat, { gamePlayerId: 757, statCategoryId: 2, total: 1 }),
+  build(Stat, { gamePlayerId: 757, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 757, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 757, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 758, statCategoryId: 1, total: 0 }),
+  build(Stat, { gamePlayerId: 758, statCategoryId: 2, total: 6 }),
+  build(Stat, { gamePlayerId: 758, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 758, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 758, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 759, statCategoryId: 1, total: 10 }),
+  build(Stat, { gamePlayerId: 759, statCategoryId: 2, total: 7 }),
+  build(Stat, { gamePlayerId: 759, statCategoryId: 3, total: 2 }),
+  build(Stat, { gamePlayerId: 759, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 759, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 760, statCategoryId: 1, total: 2 }),
+  build(Stat, { gamePlayerId: 760, statCategoryId: 2, total: 5 }),
+  build(Stat, { gamePlayerId: 760, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 760, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 760, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 761, statCategoryId: 1, total: 56 }),
+  build(Stat, { gamePlayerId: 761, statCategoryId: 2, total: 5 }),
+  build(Stat, { gamePlayerId: 761, statCategoryId: 3, total: 3 }),
+  build(Stat, { gamePlayerId: 761, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 761, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 762, statCategoryId: 1, total: 19 }),
+  build(Stat, { gamePlayerId: 762, statCategoryId: 2, total: 11 }),
+  build(Stat, { gamePlayerId: 762, statCategoryId: 3, total: 1 }),
+  build(Stat, { gamePlayerId: 762, statCategoryId: 4, total: 1 }),
+  build(Stat, { gamePlayerId: 762, statCategoryId: 5, total: 0 }),
+  build(Stat, { gamePlayerId: 763, statCategoryId: 1, total: 5 }),
+  build(Stat, { gamePlayerId: 763, statCategoryId: 2, total: 14 }),
+  build(Stat, { gamePlayerId: 763, statCategoryId: 3, total: 1 }),
+  build(Stat, { gamePlayerId: 763, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 763, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 764, statCategoryId: 1, total: 1 }),
+  build(Stat, { gamePlayerId: 764, statCategoryId: 2, total: 3 }),
+  build(Stat, { gamePlayerId: 764, statCategoryId: 3, total: 1 }),
+  build(Stat, { gamePlayerId: 764, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 764, statCategoryId: 5, total: 1 }),
+  build(Stat, { gamePlayerId: 765, statCategoryId: 1, total: 0 }),
+  build(Stat, { gamePlayerId: 765, statCategoryId: 2, total: 0 }),
+  build(Stat, { gamePlayerId: 765, statCategoryId: 3, total: 0 }),
+  build(Stat, { gamePlayerId: 765, statCategoryId: 4, total: 0 }),
+  build(Stat, { gamePlayerId: 765, statCategoryId: 5, total: 2 })
 ];
 
 export const INITIAL_STATE = {
