@@ -8739,7 +8739,7 @@ export const STATS = [
   build(Stat, { gamePlayerId: 681, statCategoryId: 3, total: 8 }),
   build(Stat, { gamePlayerId: 681, statCategoryId: 4, total: 0 }),
   build(Stat, { gamePlayerId: 681, statCategoryId: 5, total: 0 }),
-  build(Stat, { gamePlayerId: 681, statCategoryId: 1, total: 19 }),
+  build(Stat, { gamePlayerId: 682, statCategoryId: 1, total: 19 }),
   build(Stat, { gamePlayerId: 682, statCategoryId: 2, total: 2 }),
   build(Stat, { gamePlayerId: 682, statCategoryId: 3, total: 2 }),
   build(Stat, { gamePlayerId: 682, statCategoryId: 4, total: 0 }),
