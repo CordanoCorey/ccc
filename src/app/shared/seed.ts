@@ -555,6 +555,54 @@ export const GAMES = [
            startTime: new Date(2019, 6, 30, 19, 0),
            leagueId: 3,
            locationId: 3
+         }),
+         build(Game, {
+           id: 65,
+           startTime: new Date(2019, 7, 1, 17, 30),
+           leagueId: 1,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 66,
+           startTime: new Date(2019, 7, 1, 17, 30),
+           leagueId: 1,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 67,
+           startTime: new Date(2019, 7, 1, 18, 30),
+           leagueId: 2,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 68,
+           startTime: new Date(2019, 7, 1, 18, 30),
+           leagueId: 2,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 69,
+           startTime: new Date(2019, 7, 1, 19, 30),
+           leagueId: 3,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 70,
+           startTime: new Date(2019, 7, 1, 19, 30),
+           leagueId: 3,
+           locationId: 3
+         }),
+         build(Game, {
+           id: 71,
+           startTime: new Date(2019, 7, 1, 20, 30),
+           leagueId: 2,
+           locationId: 2
+         }),
+         build(Game, {
+           id: 72,
+           startTime: new Date(2019, 7, 1, 20, 30),
+           leagueId: 2,
+           locationId: 3
          })
        ];
 
@@ -686,7 +734,23 @@ export const GAME_TEAMS = [
          build(GameTeam, { id: 125, gameId: 63, teamId: 14 }),
          build(GameTeam, { id: 126, gameId: 63, teamId: 12 }),
          build(GameTeam, { id: 127, gameId: 64, teamId: 16 }),
-         build(GameTeam, { id: 128, gameId: 64, teamId: 13 })
+         build(GameTeam, { id: 128, gameId: 64, teamId: 13 }),
+         build(GameTeam, { id: 129, gameId: 65, teamId: 5 }),
+         build(GameTeam, { id: 130, gameId: 65, teamId: 2 }),
+         build(GameTeam, { id: 131, gameId: 66, teamId: 3 }),
+         build(GameTeam, { id: 132, gameId: 66, teamId: 4 }),
+         build(GameTeam, { id: 133, gameId: 67, teamId: 9 }),
+         build(GameTeam, { id: 134, gameId: 67, teamId: 7 }),
+         build(GameTeam, { id: 135, gameId: 68, teamId: 11 }),
+         build(GameTeam, { id: 136, gameId: 68, teamId: 8 }),
+         build(GameTeam, { id: 137, gameId: 69, teamId: 16 }),
+         build(GameTeam, { id: 138, gameId: 69, teamId: 12 }),
+         build(GameTeam, { id: 139, gameId: 70, teamId: 13 }),
+         build(GameTeam, { id: 140, gameId: 70, teamId: 14 }),
+         build(GameTeam, { id: 141, gameId: 71, teamId: 10 }),
+         build(GameTeam, { id: 142, gameId: 71, teamId: 8 }),
+         build(GameTeam, { id: 143, gameId: 72, teamId: 9 }),
+         build(GameTeam, { id: 144, gameId: 72, teamId: 11 })
        ];
 
 export const TEAM_STATS = [
@@ -817,7 +881,23 @@ export const TEAM_STATS = [
          build(TeamStat, { gameTeamId: 125, statCategoryId: 1, total: 92 }),
          build(TeamStat, { gameTeamId: 126, statCategoryId: 1, total: 65 }),
          build(TeamStat, { gameTeamId: 127, statCategoryId: 1, total: 102 }),
-         build(TeamStat, { gameTeamId: 128, statCategoryId: 1, total: 93 })
+         build(TeamStat, { gameTeamId: 128, statCategoryId: 1, total: 93 }),
+         build(TeamStat, { gameTeamId: 129, statCategoryId: 1, total: 41 }),
+         build(TeamStat, { gameTeamId: 130, statCategoryId: 1, total: 21 }),
+         build(TeamStat, { gameTeamId: 131, statCategoryId: 1, total: 37 }),
+         build(TeamStat, { gameTeamId: 132, statCategoryId: 1, total: 12 }),
+         build(TeamStat, { gameTeamId: 133, statCategoryId: 1, total: 53 }),
+         build(TeamStat, { gameTeamId: 134, statCategoryId: 1, total: 44 }),
+         build(TeamStat, { gameTeamId: 135, statCategoryId: 1, total: 58 }),
+         build(TeamStat, { gameTeamId: 136, statCategoryId: 1, total: 43 }),
+         build(TeamStat, { gameTeamId: 137, statCategoryId: 1, total: 96 }),
+         build(TeamStat, { gameTeamId: 138, statCategoryId: 1, total: 80 }),
+         build(TeamStat, { gameTeamId: 139, statCategoryId: 1, total: 78 }),
+         build(TeamStat, { gameTeamId: 140, statCategoryId: 1, total: 67 }),
+         build(TeamStat, { gameTeamId: 141, statCategoryId: 1, total: 60 }),
+         build(TeamStat, { gameTeamId: 142, statCategoryId: 1, total: 20 }),
+         build(TeamStat, { gameTeamId: 143, statCategoryId: 1, total: 51 }),
+         build(TeamStat, { gameTeamId: 144, statCategoryId: 1, total: 41 })
        ];
 
 export const PLAYERS = [
